@@ -33,7 +33,6 @@ class Uber extends React.Component {
         console.log(this.state);
       }
     );
-    console.log(position);
   }
 
   render() {
@@ -49,7 +48,7 @@ class Uber extends React.Component {
 
       <header className="masthead bg-primary text-white text-center" id="uberHeader">
         <div className="container">
-        <img src='../../assets/uber_2016_logo.png' className='uberLogo'></img>
+        <img src='../../assets/uber_2016_logo.png' className='uberLogo' style={{maxHeight:'50px'}}></img>
         </div>
       </header>
 
@@ -73,6 +72,8 @@ class Uber extends React.Component {
         <InfoWindow onClose={this.onInfoWindowClose}>
         </InfoWindow>
       </Map>
+
+      <button>airport</button>
 
       <hr></hr>
 

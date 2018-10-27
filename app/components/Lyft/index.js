@@ -33,7 +33,6 @@ class Lyft extends React.Component {
         console.log(this.state);
       }
     );
-    console.log(position);
   }
 
   render() {
@@ -49,7 +48,7 @@ class Lyft extends React.Component {
 
       <header className="masthead bg-primary text-white text-center" id='lyftHeader'>
         <div className="container">
-        <img src='../../assets/lyft-logo.png' className='lyftLogo'></img>
+        <img src='../../assets/lyft-logo.png' className='lyftLogo' style={{maxHeight:'50px'}}></img>
         </div>
       </header>
 

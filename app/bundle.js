@@ -57574,6 +57574,7 @@ var Header = function (_React$Component) {
   _createClass(Header, [{
     key: 'render',
     value: function render() {
+
       return _react2.default.createElement(
         'div',
         null,
@@ -57583,11 +57584,8 @@ var Header = function (_React$Component) {
           _react2.default.createElement(
             'div',
             { className: 'container' },
-            _react2.default.createElement(
-              'a',
-              { className: 'navbar-brand js-scroll-trigger', href: '/' },
-              'Whip'
-            ),
+            _react2.default.createElement('a', { className: 'navbar-brand js-scroll-trigger', href: '/' }),
+            _react2.default.createElement('img', { src: '../../assets/logo.png', className: 'WhipLogo', style: { maxHeight: '50px' } }),
             _react2.default.createElement(
               'button',
               { className: 'navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarResponsive', 'aria-controls': 'navbarResponsive', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
@@ -58428,7 +58426,6 @@ var Uber = function (_React$Component) {
         });
         console.log(_this2.state);
       });
-      console.log(position);
     }
   }, {
     key: 'render',
@@ -58449,7 +58446,7 @@ var Uber = function (_React$Component) {
           _react2.default.createElement(
             'div',
             { className: 'container' },
-            _react2.default.createElement('img', { src: '../../assets/uber_2016_logo.png', className: 'uberLogo' })
+            _react2.default.createElement('img', { src: '../../assets/uber_2016_logo.png', className: 'uberLogo', style: { maxHeight: '50px' } })
           )
         ),
         _react2.default.createElement(
@@ -58470,6 +58467,11 @@ var Uber = function (_React$Component) {
           },
           _react2.default.createElement(_googleMapsReact.Marker, { onClick: this.onMarkerClick, name: 'Current location' }),
           _react2.default.createElement(_googleMapsReact.InfoWindow, { onClose: this.onInfoWindowClose })
+        ),
+        _react2.default.createElement(
+          'button',
+          null,
+          'airport'
         ),
         _react2.default.createElement('hr', null)
       );
@@ -92613,7 +92615,6 @@ var Lyft = function (_React$Component) {
         });
         console.log(_this2.state);
       });
-      console.log(position);
     }
   }, {
     key: 'render',
@@ -92634,7 +92635,7 @@ var Lyft = function (_React$Component) {
           _react2.default.createElement(
             'div',
             { className: 'container' },
-            _react2.default.createElement('img', { src: '../../assets/lyft-logo.png', className: 'lyftLogo' })
+            _react2.default.createElement('img', { src: '../../assets/lyft-logo.png', className: 'lyftLogo', style: { maxHeight: '50px' } })
           )
         ),
         _react2.default.createElement(
