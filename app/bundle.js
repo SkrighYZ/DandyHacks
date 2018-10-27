@@ -57585,7 +57585,7 @@ var Header = function (_React$Component) {
             'div',
             { className: 'container' },
             _react2.default.createElement('a', { className: 'navbar-brand js-scroll-trigger', href: '/' }),
-            _react2.default.createElement('img', { src: '../../assets/logo.png', className: 'WhipLogo', style: { maxHeight: '50px' } }),
+            _react2.default.createElement('img', { src: '../../assets/whip_logo.png', className: 'WhipLogo', style: { maxHeight: '50px' } }),
             _react2.default.createElement(
               'button',
               { className: 'navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarResponsive', 'aria-controls': 'navbarResponsive', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
