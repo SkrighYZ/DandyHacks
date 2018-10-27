@@ -9,8 +9,7 @@
     "build-js": "webpack",
     "build-css": "node-sass --include-path scss ./app/styles/app.scss ./app/styles/app.css",
     "watch-css": "nodemon -e scss -x 'npm run build-css'",
-    "test": "jest",
-    "py-file": "python "
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,7 +23,6 @@
   "homepage": "https://github.com/white105/DandyHacks#readme",
   "dependencies": {
     "@google-cloud/storage": "^2.2.0",
-    "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "css-loader": "^0.28.7",

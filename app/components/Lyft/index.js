@@ -1,6 +1,7 @@
 import React from 'react'
 import FlightDataService from '../../services/FlightDataService/index'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import Demo from '../Demo/index'
 
 class Lyft extends React.Component {
 
@@ -20,6 +21,10 @@ class Lyft extends React.Component {
     this.flightDataService.getFlightData('LGA')
   }
 
+  componentDidMount() {
+    
+  }
+
   render() {
 
     const mapStyles = {
@@ -36,6 +41,8 @@ class Lyft extends React.Component {
         <img src='../../assets/lyft-logo.png' className='lyftLogo'></img>
         </div>
       </header>
+
+      <Demo></Demo>
 
       <Map
       google={this.props.google}
