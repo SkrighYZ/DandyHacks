@@ -1,7 +1,6 @@
 import React from 'react'
 import FlightDataService from '../../services/FlightDataService/index'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-import Demo from '../Demo/index'
 
 class Lyft extends React.Component {
 
@@ -9,8 +8,8 @@ class Lyft extends React.Component {
     super()
 
     this.state = {
-      latitude: 47,
-      longitude: -23
+      latitude: 40.854885,
+      longitude: -88.081807
     }
 
     this.getFlightData = this.getFlightData.bind(this)
@@ -22,7 +21,19 @@ class Lyft extends React.Component {
   }
 
   componentDidMount() {
-    
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        const { lat, lon } = position.coords;
+        console.log(position);
+
+        this.setState({
+         latitude: position.coords.latitude,
+         longitude: position.coords.longitude
+        });
+        console.log(this.state);
+      }
+    );
+    console.log(position);
   }
 
   render() {
@@ -42,8 +53,6 @@ class Lyft extends React.Component {
         </div>
       </header>
 
-      <Demo></Demo>
-
       <Map
       google={this.props.google}
       zoom={14}
@@ -51,12 +60,15 @@ class Lyft extends React.Component {
             lat: 40.854885,
             lng: -88.081807
           }}
+      center={{
+            lat: this.state.latitude,
+            lng: this.state.longitude
+          }}    
       onClick={this.onMapClicked}
       style={mapStyles}
       >
 
-        <Marker onClick={this.onMarkerClick}
-                name={'Current location'} />
+        <Marker onClick={this.onMarkerClick} name={'Current location'} />
 
         <InfoWindow onClose={this.onInfoWindowClose}>
         </InfoWindow>

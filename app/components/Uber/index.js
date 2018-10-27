@@ -1,7 +1,6 @@
 import React from 'react'
 import FlightDataService from '../../services/FlightDataService/index'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-import Demo from '../Demo/index'
 
 class Uber extends React.Component {
 
@@ -53,8 +52,6 @@ class Uber extends React.Component {
         <img src='../../assets/uber_2016_logo.png' className='uberLogo'></img>
         </div>
       </header>
-
-      <Demo></Demo>
 
       <Map
       google={this.props.google}
