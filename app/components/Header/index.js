@@ -16,7 +16,7 @@ class Header extends React.Component {
       <nav className="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
         <div className="container">
           <a className="navbar-brand js-scroll-trigger" href="/"></a>
-          <img src='../../assets/logo.png' className='WhipLogo' style={{maxHeight: '50px'}}></img>
+          <img src='../../assets/whip_logo.png' className='WhipLogo' style={{maxHeight: '50px'}}></img>
           <button className="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i className="fas fa-bars"></i>
