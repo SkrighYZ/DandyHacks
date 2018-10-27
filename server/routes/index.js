@@ -5,19 +5,19 @@ var path           = require('path'),
     mongoose       = require('mongoose')
 
 router.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, '../../app/index.html'));
 });
 
 router.get('/uber', function (req, res) {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, '../../app/index.html'));
 });
 
 router.get('/lyft', function (req, res) {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, '../../app/index.html'));
 });
 
 router.get('/login', function (req, res) {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, '../../app/index.html'));
 });
 
 router.get('/flight-data', function (req, res) {

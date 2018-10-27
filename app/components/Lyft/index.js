@@ -1,5 +1,6 @@
 import React from 'react'
 import FlightDataService from '../../services/FlightDataService/index'
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 class Lyft extends React.Component {
 
@@ -25,6 +26,16 @@ class Lyft extends React.Component {
         <img src='../../assets/lyft-logo.png' className='lyftLogo'></img>
         </div>
       </header>
+
+      <Map google={this.props.google} zoom={14}>
+
+        <Marker onClick={this.onMarkerClick}
+                name={'Current location'} />
+
+        <InfoWindow onClose={this.onInfoWindowClose}>
+        </InfoWindow>
+      </Map>
+
 
       <section className="portfolio" id="portfolio">
         <div className="container">
@@ -339,4 +350,6 @@ class Lyft extends React.Component {
   }
 }
 
-export default Lyft
+export default GoogleApiWrapper({
+  apiKey: ('AIzaSyBaE-JVaFk4HeWmSOYi7s3tsaCYmZrISs0')
+})(Lyft)

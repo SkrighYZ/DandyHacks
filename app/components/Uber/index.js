@@ -1,4 +1,5 @@
 import React from 'react'
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 class Uber extends React.Component {
 
@@ -17,6 +18,23 @@ class Uber extends React.Component {
         <img src='../../assets/uber_2016_logo.png' className='uberLogo'></img>
         </div>
       </header>
+
+      <Map
+      google={this.props.google}
+      zoom={14}
+      initialCenter={{
+            lat: 40.854885,
+            lng: -88.081807
+          }}
+      onClick={this.onMapClicked}
+      >
+
+        <Marker onClick={this.onMarkerClick}
+                name={'Current location'} />
+
+        <InfoWindow onClose={this.onInfoWindowClose}>
+        </InfoWindow>
+      </Map>
 
       <section className="portfolio" id="portfolio">
         <div className="container">
@@ -333,4 +351,6 @@ class Uber extends React.Component {
   }
 }
 
-export default Uber
+export default GoogleApiWrapper({
+  apiKey: ('AIzaSyBaE-JVaFk4HeWmSOYi7s3tsaCYmZrISs0')
+})(Uber)
