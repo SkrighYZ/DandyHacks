@@ -21,6 +21,22 @@ class Uber extends React.Component {
     this.flightDataService.getFlightData('LGA')
   }
 
+  componentDidMount(){
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        const { lat, lon } = position.coords;
+        console.log(position);
+
+        this.setState({
+         latitude: position.coords.latitude,
+         longitude: position.coords.longitude
+        });
+        console.log(this.state);
+      }
+    );
+    console.log(position);
+  }
+
   render() {
 
     const mapStyles = {
@@ -44,9 +60,13 @@ class Uber extends React.Component {
       google={this.props.google}
       zoom={14}
       initialCenter={{
+            lat: 40.854885,
+            lng: -88.081807
+          }}
+      center={{
             lat: this.state.latitude,
             lng: this.state.longitude
-          }}
+          }}    
       onClick={this.onMapClicked}
       style={mapStyles}
       >
