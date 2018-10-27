@@ -21,17 +21,7 @@ router.get('/login', function (req, res) {
 });
 
 router.get('/flight-data', function (req, res) {
-  let airportCode = req.body.airportCode;
-
-  const { spawn } = require('child_process');
-  const pyProg = spawn('python', ['./../Beautiful_Flights/beautiful_flights.py']);
-
-  pyProg.stdout.on('data', function(data) {
-
-      console.log(data.toString());
-      res.write(data);
-      res.end('end');
-  });
+  
 });
 
 
