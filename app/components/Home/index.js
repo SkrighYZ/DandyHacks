@@ -4,33 +4,13 @@ class Home extends React.Component {
 
   constructor(props) {
     super(props)
+
+    this.state={}
   }
 
   render() {
     return (
       <div>
-      <nav className="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-        <div className="container">
-          <a className="navbar-brand js-scroll-trigger" href="#page-top">Drive Smart</a>
-          <button className="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i className="fas fa-bars"></i>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarResponsive">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item mx-0 mx-lg-1">
-                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
-              </li>
-              <li className="nav-item mx-0 mx-lg-1">
-                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-              </li>
-              <li className="nav-item mx-0 mx-lg-1">
-                <a className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
 
       <header className="masthead bg-primary text-white text-center">
         <div className="container">
@@ -42,8 +22,11 @@ class Home extends React.Component {
 
       <section className="portfolio" id="portfolio">
         <div className="container">
-          <h2 className="text-center text-uppercase text-secondary mb-0">Best Times</h2>
+          <h2 className="text-center text-uppercase text-secondary mb-0">Time</h2>
           <hr className="star-dark mb-5"></hr>
+          <p className="lead">Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day.
+          Plan your driving schedule in advance through our easy to use service and add value to your time.
+          </p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
@@ -105,7 +88,7 @@ class Home extends React.Component {
 
       <section className="bg-primary text-white mb-0" id="about">
         <div className="container">
-          <h2 className="text-center text-uppercase text-white">About</h2>
+          <h2 className="text-center text-uppercase text-white">Location</h2>
           <hr className="star-light mb-5"></hr>
           <div className="row">
             <div className="col-lg-4 ml-auto">
@@ -126,7 +109,7 @@ class Home extends React.Component {
 
       <section id="contact">
         <div className="container">
-          <h2 className="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+          <h2 className="text-center text-uppercase text-secondary mb-0">Contact Us</h2>
           <hr className="star-dark mb-5"></hr>
           <div className="row">
             <div className="col-lg-8 mx-auto">

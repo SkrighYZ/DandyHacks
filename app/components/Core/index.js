@@ -1,6 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Header from '../Header/index'
 import Home from '../Home/index'
+import Uber from '../Uber/index'
+import Lyft from '../Lyft/index'
 
 class Core extends React.Component {
   render() {
@@ -8,7 +11,10 @@ class Core extends React.Component {
       <div>
         <Router>
           <div>
+            <Header></Header>
             <Route exact path='/' component={Home} />
+            <Route exact path='/uber' component={Uber} />
+            <Route exact path='/lyft' component={Lyft} />
           </div>
         </Router>
       </div>

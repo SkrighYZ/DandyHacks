@@ -282,6 +282,32 @@ a {
     background-color: #1a252f;
     border-color: #1a252f; }
 
+#uberHeader {
+  background-color: white !important; }
+
+.uberLogo {
+  display: block;
+  max-width: 230px;
+  max-height: 95px;
+  width: auto;
+  height: auto;
+  margin: auto; }
+
+#uberTitle {
+  font-family: 'Raleway', sans-serif;
+  color: #09091a; }
+
+#lyftHeader {
+  background-color: white !important; }
+
+.lyftLogo {
+  display: block;
+  max-width: 230px;
+  max-height: 95px;
+  width: auto;
+  height: auto;
+  margin: auto; }
+
 body {
   background: white !important;
   padding: 0;
