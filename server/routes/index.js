@@ -21,7 +21,6 @@ router.get('/login', function (req, res) {
 });
 
 router.get('/flight-data', function (req, res) {
-  
 });
 
 
