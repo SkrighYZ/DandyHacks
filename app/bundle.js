@@ -12488,7 +12488,7 @@ exports = module.exports = __webpack_require__(106)(false);
 
 
 // module
-exports.push([module.i, ".chatComponentContainer {\n  margin-top: 5rem !important;\n  width: 100rem !important;\n  height: 80rem !important;\n  margin: auto !important;\n  display: flex;\n  justify-content: center; }\n\n.firstUserVideo {\n  border: 1px solid #B33F62 !important; }\n\n.chatTopicPrompt {\n  padding: 2rem;\n  margin-bottom: 5rem !important;\n  margin-top: 5rem !important;\n  width: 30rem !important;\n  margin: auto !important;\n  text-align: center !important;\n  display: block !important; }\n\n.messageListItem {\n  font-size: 1.5rem;\n  font-family: 'Lato', sans-serif;\n  margin-left: 1rem;\n  list-style: none;\n  list-style-type: none; }\n\ninput, button {\n  outline: none;\n  margin: auto;\n  margin-top: 2rem; }\n  input:active, button:active {\n    outline: none; }\n\n.visible {\n  margin-top: 5rem; }\n\n#start-conferencing {\n  background: #4A90E2;\n  font-size: 1.5rem;\n  color: white;\n  text-shadow: none;\n  width: 20rem; }\n\n.rooms-list {\n  width: 50rem;\n  height: 50rem;\n  border: 1px solid black;\n  background: lightblue; }\n\n#participants {\n  width: 100%;\n  height: 50rem;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  #participants video {\n    width: 50rem;\n    height: 35rem;\n    padding: 2rem;\n    margin: 1rem;\n    border-radius: 1rem; }\n\n.privateBroadcastHeader {\n  font-size: 2rem;\n  text-align: center; }\n\n#conference-name {\n  margin-top: 5rem;\n  width: 30rem;\n  height: 4rem;\n  display: block;\n  margin: auto; }\n\n.interestListItem {\n  display: inline-block;\n  margin: 1rem; }\n\n.homeSection3LeftListParagraph {\n  margin: 1rem; }\n\n.navbar {\n  background: #B33F62;\n  border: none;\n  border-radius: 0; }\n  .navbar #headerLink {\n    color: white;\n    text-decoration: none;\n    font-family: 'Montserrat', sans-serif !important;\n    font-size: 2rem; }\n    .navbar #headerLink:hover {\n      text-decoration: none; }\n  .navbar #linkContainer {\n    outline: none; }\n  .navbar .navLinkContainer {\n    display: table-cell;\n    vertical-align: middle;\n    width: 10rem;\n    height: 5rem; }\n    .navbar .navLinkContainer .headerTab {\n      color: white;\n      font-family: \"Montserrat\", sans-serif; }\n      .navbar .navLinkContainer .headerTab:hover {\n        text-decoration: none;\n        color: #eee; }\n      .navbar .navLinkContainer .headerTab:link {\n        text-decoration: none; }\n\n.dropdown .dropdown-toggle:focus, .dropdown .dropdown-toggle:visited, .dropdown .dropdown-toggle:link, .dropdown .dropdown-toggle:active {\n  background: #B33F62 !important;\n  border: none !important; }\n\n.menuItemLink {\n  width: 100%;\n  height: 100%;\n  text-decoration: none;\n  text-align: center;\n  color: black;\n  display: block; }\n  .menuItemLink:hover, .menuItemLink:visited, .menuItemLink:focus {\n    text-decoration: none; }\n  .menuItemLink:hover {\n    color: black;\n    background: #ccc; }\n\n.homeSectionDiv {\n  height: 35rem; }\n\n.homeSectionDivTitle {\n  font-size: 1rem; }\n\n#homeSection1 {\n  margin-top: 5rem;\n  display: flex;\n  justify-content: space-between;\n  flex-direction: column;\n  height: 50rem; }\n  #homeSection1 h3 {\n    flex: 1;\n    margin: 0;\n    font-size: 2.5rem;\n    font-family: 'Montserrat', sans-serif;\n    width: 50%;\n    margin: auto;\n    text-align: center;\n    font-weight: 300; }\n  #homeSection1 .subTitleDiv {\n    flex: 3;\n    display: flex;\n    justify-content: center; }\n  #homeSection1 .signUpButtonDiv {\n    flex: 1;\n    width: 17rem;\n    height: 3.5rem;\n    margin: auto;\n    margin-top: 5rem; }\n  #homeSection1 .signUpHomeButton {\n    width: 17rem;\n    height: 3.5rem;\n    border-radius: .5rem;\n    background: #4A90E2;\n    outline: none;\n    border: none;\n    color: white;\n    font-size: 1.6rem;\n    outline: none; }\n    #homeSection1 .signUpHomeButton a {\n      color: white;\n      text-decoration: none; }\n\n#homeSection2 {\n  background: white !important;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  #homeSection2 .homeSection2Left {\n    flex: 1;\n    height: 25rem;\n    margin-top: 5rem;\n    border-right: 1px solid #B33F62; }\n    #homeSection2 .homeSection2Left p {\n      width: 70%;\n      margin: auto;\n      font-size: 3rem; }\n  #homeSection2 .homeSection2Right {\n    flex: 1;\n    display: flex;\n    justify-content: center; }\n    #homeSection2 .homeSection2Right .videoLoop2 {\n      width: 80%;\n      height: 80%;\n      margin: auto;\n      -webkit-border-radius: 10px;\n      -moz-border-radius: 10px;\n      border-radius: 10px; }\n\n#homeSection3 {\n  background: white;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  #homeSection3 .homeSection3Left {\n    flex: 1;\n    height: 25rem;\n    margin-top: 5rem;\n    border-right: 1px solid #B33F62; }\n  #homeSection3 .homeSection3Right {\n    flex: 1;\n    display: flex;\n    justify-content: center; }\n    #homeSection3 .homeSection3Right .stockPhoto {\n      width: 35rem;\n      height: 20rem;\n      margin: auto; }\n\n.homeSection2RightListTitle {\n  font-size: 2rem;\n  margin-top: 8rem;\n  text-align: center; }\n\n.homeSection2RightList {\n  margin: auto;\n  width: 75%;\n  padding: 1rem;\n  font-size: 1.8rem;\n  font-weight: 200;\n  list-style: none; }\n  .homeSection2RightList li {\n    text-align: center; }\n  .homeSection2RightList .homeSection2RightListParagraph {\n    font-family: 'Montserrat', sans-serif; }\n\n.homeSection3LeftListTitle {\n  font-size: 2rem;\n  text-align: center; }\n\n.homeSection3LeftList {\n  width: 75%;\n  margin: auto;\n  padding: 1rem;\n  font-size: 1.7rem;\n  font-weight: 200;\n  list-style: none; }\n  .homeSection3LeftList li {\n    text-align: center; }\n  .homeSection3LeftList .homeSection3LeftListParagraph {\n    font-family: 'Montserrat', sans-serif; }\n\n#homeSection5 {\n  width: 100%;\n  height: auto;\n  position: relative;\n  overflow: hidden;\n  margin: auto;\n  padding: 34.37% 0 0 0; }\n\n#largeStockPhoto {\n  display: block;\n  width: 100%;\n  height: auto;\n  position: absolute;\n  margin: auto;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0; }\n\n#homeSection4 {\n  background: #EFF1F3;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around; }\n  #homeSection4 .homeSectionFooterRow {\n    display: flex;\n    justify-content: space-around; }\n    #homeSection4 .homeSectionFooterRow .homeSectionFooterColumn {\n      flex: 1; }\n      #homeSection4 .homeSectionFooterRow .homeSectionFooterColumn .footerColumnHeader {\n        text-align: center;\n        color: #B33F62;\n        text-decoration: underline; }\n      #homeSection4 .homeSectionFooterRow .homeSectionFooterColumn ul {\n        list-style: none;\n        padding: 0; }\n        #homeSection4 .homeSectionFooterRow .homeSectionFooterColumn ul li {\n          text-align: center; }\n          #homeSection4 .homeSectionFooterRow .homeSectionFooterColumn ul li a {\n            color: black; }\n    #homeSection4 .homeSectionFooterRow #socialIconDiv {\n      width: 50%;\n      margin: auto;\n      display: flex;\n      justify-content: space-between; }\n      #homeSection4 .homeSectionFooterRow #socialIconDiv .socialFooterIcon {\n        font-size: 3rem; }\n      #homeSection4 .homeSectionFooterRow #socialIconDiv #linkedinIcon {\n        color: #0077b5; }\n      #homeSection4 .homeSectionFooterRow #socialIconDiv #instagramIcon {\n        color: #517fa4; }\n      #homeSection4 .homeSectionFooterRow #socialIconDiv #twitterIcon {\n        color: #55acee; }\n      #homeSection4 .homeSectionFooterRow #socialIconDiv #facebookIcon {\n        color: #3b5998; }\n\n.companyDescription {\n  font-weight: 1rem; }\n\n.loginFormContainer {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  margin: auto;\n  margin-top: 10rem; }\n\n.loginDiv {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  justify-content: center; }\n  .loginDiv #loginSiteTitle {\n    width: 70%;\n    margin: auto; }\n  .loginDiv .signupParagraph {\n    width: 70%;\n    margin: auto;\n    margin-top: 2rem;\n    color: #555; }\n  .loginDiv .signupDisclaimer {\n    font-size: 1.3rem;\n    width: 70%;\n    margin: auto;\n    margin-top: 2rem;\n    color: #555; }\n  .loginDiv input, .loginDiv button {\n    outline: none;\n    width: 70%;\n    margin: auto;\n    margin-top: 2rem; }\n    .loginDiv input:active, .loginDiv button:active {\n      outline: none; }\n  .loginDiv #loginButton {\n    background: #4A90E2;\n    font-size: 1.5rem;\n    color: white;\n    text-shadow: none; }\n\n.rightImageDiv {\n  flex: 1;\n  display: flex;\n  justify-content: center; }\n  .rightImageDiv img {\n    width: 50rem;\n    height: 50rem;\n    margin: auto;\n    border-radius: 1.2rem; }\n\n.profileComponentContainer {\n  display: flex;\n  flex-direction: row;\n  width: 100rem;\n  margin: auto; }\n\ninput, button {\n  outline: none; }\n  input:active, button:active {\n    outline: none; }\n\n.mainProfileData {\n  width: 45rem;\n  height: 40rem;\n  margin-left: 5rem;\n  display: flex;\n  flex-direction: column; }\n  .mainProfileData .mainProfileDataTop {\n    display: flex;\n    flex-direction: row; }\n    .mainProfileData .mainProfileDataTop div {\n      flex: 1; }\n  .mainProfileData .mainProfileDataText {\n    margin-left: 1rem;\n    margin-top: 1rem; }\n  .mainProfileData .profileImage {\n    width: 20rem;\n    height: 20rem;\n    border: 2px solid #B33F62;\n    border-radius: 1rem;\n    padding: .5rem; }\n  .mainProfileData .mainProfileDataBottom {\n    display: flex; }\n    .mainProfileData .mainProfileDataBottom div {\n      flex: 1; }\n    .mainProfileData .mainProfileDataBottom .profileInterestsContainer button {\n      width: 8rem;\n      height: 2rem;\n      margin-left: 1rem;\n      margin-top: 1rem; }\n\n.profileInputContainer {\n  display: inline-block;\n  margin-left: 5rem; }\n\n.profileInput {\n  width: 35rem; }\n\n.profileBio {\n  padding: 2rem;\n  padding-right: 3rem;\n  padding-left: 1rem; }\n\n.profileInputDiv {\n  margin-top: 3rem;\n  margin-left: 5rem; }\n\n.workExpirienceLabel, .basicInfoLabel, .educationLabel {\n  font-size: 2rem;\n  font-weight: lighter;\n  margin-bottom: 2rem; }\n\n.educationLabel {\n  margin-top: 1.5rem; }\n\n.addAnotherButton {\n  background: #4A90E2;\n  font-size: 1.5rem;\n  color: white;\n  text-shadow: none; }\n\n#editProfileButton, #saveProfileEdits {\n  background: #4A90E2;\n  font-size: 1.5rem;\n  color: white;\n  text-shadow: none;\n  outline: none; }\n\nbutton {\n  outline: none;\n  margin: auto; }\n  button:active, button:hover {\n    outline: none;\n    background: #4A90E2;\n    color: white; }\n\n.registerFormContainer {\n  width: 50rem;\n  height: 40rem;\n  border: 1px solid #ccc;\n  margin: auto;\n  margin-top: 5rem; }\n\n.registerFormTitle {\n  text-align: center;\n  font-size: 2rem;\n  font-family: 'Helvetica', sans-serif;\n  font-weight: 200; }\n\n.registerFormInputDiv {\n  width: 100%;\n  height: 15rem;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n  .registerFormInputDiv .registerFormInputDivColumn {\n    width: 100%;\n    display: flex;\n    flex-direction: column; }\n    .registerFormInputDiv .registerFormInputDivColumn input {\n      width: 80%;\n      height: 2.5rem;\n      border: none;\n      /* <-- This thing here */\n      border: solid 1px #ccc;\n      border-radius: .5rem;\n      text-shadow: none;\n      font-size: 1.2rem;\n      font-weight: 200; }\n\n.registerFormInputTitle {\n  text-align: center;\n  font-weight: 300;\n  font-family: 'Helvetica', sans-serif; }\n\n.registerFormInput {\n  margin: auto;\n  outline: none; }\n\n.registerFormButton {\n  width: 10rem;\n  height: 3rem;\n  outline: none;\n  background: white;\n  border: 1px solid #B33F62;\n  margin: auto;\n  margin-top: 3rem;\n  font-size: 1rem; }\n  .registerFormButton:hover {\n    background: #B33F62;\n    color: white;\n    outline: none; }\n  .registerFormButton:active {\n    background: #911A21;\n    color: white; }\n\n.selectLabel {\n  margin-left: 10rem;\n  margin-top: 1rem;\n  font-size: 2rem;\n  font-weight: lighter; }\n\n.bootstrapSelect {\n  width: 45rem;\n  margin-left: 10rem; }\n\n.chatBotContainer {\n  display: flex;\n  flex-direction: column;\n  justify-content: center; }\n\n.chatBotGreeting {\n  margin-top: 20rem;\n  text-align: center;\n  font-family: \"Montserrat\", sans-serif; }\n\n#speechToTextButton {\n  width: 25rem;\n  margin: auto;\n  background: #4A90E2;\n  font-size: 1.5rem;\n  color: white;\n  text-shadow: none; }\n\nbutton {\n  outline: none;\n  width: 70%;\n  margin: auto;\n  margin-top: 2rem; }\n  button:active {\n    outline: none; }\n\nh1 {\n  text-align: center;\n  font-family: 'Lato', sans-serif; }\n\n.my-uploader {\n  margin: auto;\n  margin-top: 10rem;\n  width: 45rem;\n  height: 45rem;\n  border: 5px solid black;\n  border-radius: 50%;\n  border-color: #006988; }\n\n.dragInfo {\n  text-align: center;\n  font-family: 'Lato', sans-serif;\n  margin-top: 20rem;\n  font-size: 2rem;\n  font-family: \"Montserrat\", sans-serif; }\n\n#dragStatic {\n  margin-top: 50%; }\n\n.chatBotGreeting {\n  text-align: center;\n  margin: 0;\n  margin: 1rem; }\n\n.chat-bot-text-input {\n  width: 50rem; }\n\n.chat-bot-text-button {\n  background: #4A90E2 !important;\n  font-size: 1.5rem;\n  color: white !important;\n  width: 30rem;\n  text-shadow: none; }\n\nbutton {\n  outline: none;\n  margin: auto;\n  margin-top: 2rem; }\n  button:active {\n    outline: none; }\n\n.currentAnswerHeader {\n  margin: auto;\n  margin-top: 5rem;\n  font-size: 2rem;\n  width: 50rem; }\n\n.chat-bot-text-input::placeholder {\n  font-weight: lighter;\n  color: #333;\n  opacity: .5; }\n\n.answerHistoryList {\n  overflow: scroll;\n  height: 25rem;\n  width: 50rem;\n  margin: auto; }\n\n.courseAnalytcsHeader {\n  text-align: center; }\n\n.dashboardContainer {\n  width: 60rem;\n  height: 50rem;\n  display: flex;\n  justify-content: space-between;\n  margin: auto; }\n\n.dashboardStudentContainer, .dashboardProfessorContainer {\n  margin-top: 3rem;\n  width: 25rem;\n  height: 25rem;\n  border: 1px solid black; }\n\nbody {\n  background: white !important;\n  padding: 0;\n  margin: 0;\n  font-family: 'Lato', sans-serif; }\n\n/*\n\n#root {\n    margin-bottom: 3rem;\n}\n\n.base--hr {\n    margin-top: 1em;\n}\n\n.tab-panels--tab-content {\n    min-height: 250px;\n}\n\n.arrow-box-container {\n    position: relative;\n}\n\nsup {\n    vertical-align: super;\n    font-size: 0.8rem;\n}\n\ndialog, dd, dt {\n    position: static;\n    display: block;\n    border: 0;\n    padding: 0;\n}\n\n\n\n._container {\n    position: relative;\n}\n.base--checkbox + label, .base--radio + label, .prism {\n    position: static;\n}\n.drop-info-container {\n    position: absolute;\n    display: none;\n\n    padding-right: 1rem;\n}\n\n.dropzone.dropzone-active .drop-info-container,\n.dropzone.dropzone-reject .drop-info-container {\n    display: block;\n}\n\n.drop-info {\n    background-color: white;\n    opacity: 0.9;\n    padding: 60px;\n    min-height: 800px;\n    border: 10px dashed #959595;\n    border-radius: 10px;\n    z-index: 1;\n}\n.drop-info h1 {\n    font-size: 60px;\n}\n.drop-info p {\n    font-size: 30px;\n}\n.dropzone.dropzone-reject .drop-info{\n    background-color: #E71D32;\n}\n\n\n.base--input {\n    border: 2px solid #464646;\n}\n\n.base--input:hover, .base--input:focus {\n    border-width: 2px;\n}\n\n.flex > * {\n    margin: 6px 6px 0 0;\n}\n.flex > *:last-child {\n    margin-right: 0;\n}\n\n@media (min-width: 1024px) {\n    .flex {\n        display: flex;\n    }\n    .flex > * {\n        flex: 1;\n        margin: 0 6px 0 0;\n    }\n    .flex > *:last-child {\n        margin-right: 0;\n    }\n    .base--input, .base--select {\n        max-width: 100%;\n    }\n}\n\n.base--button:focus {\n  outline: 0;\n}\n\n\n.base--button.mic-active {\n    background-color: #E71D32;\n    color: white;\n    border-color: #E71D32\n}\n\n.speaker-labels {\n    margin-left: 0px;\n}\n\n\n.speaker-labels dt {\n    font-weight: bold;\n    display: inline;\n}\n.speaker-labels dd {\n    display: inline;\n}\n\n.jsonview .options > div {\n    display: inline-block;\n}\n.jsonview .options > div > div {\n    display: inline-block;\n    margin-right: 1em;\n}\n.jsonview .options div:before {\n    display: none;\n}\n.json-link--span code {\n    word-wrap: break-word;\n}\n\n.word-timings-alternatives .word {\n    padding-right: 1ex;\n    display: inline-block;\n    margin-top: 0;\n}\n\n.smalltext { font-size: 10pt; }\n\n.gdpr-info {\n\tfont-size: 10pt;\n\tmargin-top: 1em;\n}\n*/\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'Lato'; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-weight: 700;\n  font-family: 'Montserrat'; }\n\nhr.star-light,\nhr.star-dark {\n  max-width: 15rem;\n  padding: 0;\n  text-align: center;\n  border: none;\n  border-top: solid 0.25rem;\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem;\n  margin-left: auto;\n  margin-right: auto; }\n\nhr.star-light:after,\nhr.star-dark:after {\n  position: relative;\n  top: -.8em;\n  display: inline-block;\n  padding: 0 0.25em;\n  content: '\\F005';\n  font-family: \"Font Awesome 5 Free\";\n  font-weight: 900;\n  font-size: 2em; }\n\nhr.star-light {\n  border-color: #fff; }\n\nhr.star-light:after {\n  color: #fff;\n  background-color: #18BC9C; }\n\nhr.star-dark {\n  border-color: #2C3E50; }\n\nhr.star-dark:after {\n  color: #2C3E50;\n  background-color: white; }\n\nsection {\n  padding: 6rem 0; }\n  section h2 {\n    font-size: 2.25rem;\n    line-height: 2rem; }\n  @media (min-width: 992px) {\n    section h2 {\n      font-size: 3rem;\n      line-height: 2.5rem; } }\n\n.btn-xl {\n  padding: 1rem 1.75rem;\n  font-size: 1.25rem; }\n\n.btn-social {\n  width: 3.25rem;\n  height: 3.25rem;\n  font-size: 1.25rem;\n  line-height: 2rem; }\n\n.scroll-to-top {\n  z-index: 1042;\n  right: 1rem;\n  bottom: 1rem;\n  display: none; }\n  .scroll-to-top a {\n    width: 3.5rem;\n    height: 3.5rem;\n    background-color: rgba(33, 37, 41, 0.5);\n    line-height: 3.1rem; }\n\n#mainNav {\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  font-weight: 700;\n  font-family: 'Montserrat'; }\n  #mainNav .navbar-brand {\n    color: #fff; }\n  #mainNav .navbar-nav {\n    margin-top: 1rem;\n    letter-spacing: 0.0625rem; }\n    #mainNav .navbar-nav li.nav-item a.nav-link {\n      color: #fff; }\n      #mainNav .navbar-nav li.nav-item a.nav-link:hover {\n        color: #18BC9C; }\n      #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {\n        color: #fff; }\n      #mainNav .navbar-nav li.nav-item a.nav-link.active {\n        color: #18BC9C; }\n  #mainNav .navbar-toggler {\n    font-size: 80%;\n    padding: 0.8rem; }\n\n@media (min-width: 992px) {\n  #mainNav {\n    padding-top: 1.5rem;\n    padding-bottom: 1.5rem;\n    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;\n    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;\n    transition: padding-top 0.3s, padding-bottom 0.3s; }\n    #mainNav .navbar-brand {\n      font-size: 2em;\n      -webkit-transition: font-size 0.3s;\n      -moz-transition: font-size 0.3s;\n      transition: font-size 0.3s; }\n    #mainNav .navbar-nav {\n      margin-top: 0; }\n    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {\n      color: #fff;\n      background: #18BC9C; }\n      #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {\n        color: #fff;\n        background: #18BC9C; }\n  #mainNav.navbar-shrink {\n    padding-top: 0.5rem;\n    padding-bottom: 0.5rem; }\n    #mainNav.navbar-shrink .navbar-brand {\n      font-size: 1.5em; } }\n\nheader.masthead {\n  padding-top: calc(6rem + 72px);\n  padding-bottom: 6rem; }\n  header.masthead h1 {\n    font-size: 3rem;\n    line-height: 3rem; }\n  header.masthead h2 {\n    font-size: 1.3rem;\n    font-family: 'Lato'; }\n\n@media (min-width: 992px) {\n  header.masthead {\n    padding-top: calc(6rem + 106px);\n    padding-bottom: 6rem; }\n    header.masthead h1 {\n      font-size: 4.75em;\n      line-height: 4rem; }\n    header.masthead h2 {\n      font-size: 1.75em; } }\n\n.portfolio {\n  margin-bottom: -15px; }\n  .portfolio .portfolio-item {\n    position: relative;\n    display: block;\n    max-width: 25rem;\n    margin-bottom: 15px; }\n    .portfolio .portfolio-item .portfolio-item-caption {\n      -webkit-transition: all ease 0.5s;\n      -moz-transition: all ease 0.5s;\n      transition: all ease 0.5s;\n      opacity: 0;\n      background-color: rgba(24, 188, 156, 0.9); }\n      .portfolio .portfolio-item .portfolio-item-caption:hover {\n        opacity: 1; }\n      .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {\n        font-size: 1.5rem; }\n  @media (min-width: 576px) {\n    .portfolio {\n      margin-bottom: -30px; }\n      .portfolio .portfolio-item {\n        margin-bottom: 30px; } }\n\n.portfolio-modal .portfolio-modal-dialog {\n  padding: 3rem 1rem;\n  min-height: calc(100vh - 2rem);\n  margin: 1rem calc(1rem - 8px);\n  position: relative;\n  z-index: 2;\n  -moz-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);\n  box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5); }\n  .portfolio-modal .portfolio-modal-dialog .close-button {\n    position: absolute;\n    top: 2rem;\n    right: 2rem; }\n    .portfolio-modal .portfolio-modal-dialog .close-button i {\n      line-height: 38px; }\n  .portfolio-modal .portfolio-modal-dialog h2 {\n    font-size: 2rem; }\n\n@media (min-width: 768px) {\n  .portfolio-modal .portfolio-modal-dialog {\n    min-height: 100vh;\n    padding: 5rem;\n    margin: 3rem calc(3rem - 8px); }\n    .portfolio-modal .portfolio-modal-dialog h2 {\n      font-size: 3rem; } }\n\n.floating-label-form-group {\n  position: relative;\n  border-bottom: 1px solid #e9ecef; }\n  .floating-label-form-group input,\n  .floating-label-form-group textarea {\n    font-size: 1.5em;\n    position: relative;\n    z-index: 1;\n    padding-right: 0;\n    padding-left: 0;\n    resize: none;\n    border: none;\n    border-radius: 0;\n    background: none;\n    box-shadow: none !important; }\n  .floating-label-form-group label {\n    font-size: 0.85em;\n    line-height: 1.764705882em;\n    position: relative;\n    z-index: 0;\n    top: 2em;\n    display: block;\n    margin: 0;\n    -webkit-transition: top 0.3s ease, opacity 0.3s ease;\n    -moz-transition: top 0.3s ease, opacity 0.3s ease;\n    -ms-transition: top 0.3s ease, opacity 0.3s ease;\n    transition: top 0.3s ease, opacity 0.3s ease;\n    vertical-align: middle;\n    vertical-align: baseline;\n    opacity: 0; }\n  .floating-label-form-group:not(:first-child) {\n    padding-left: 14px;\n    border-left: 1px solid #e9ecef; }\n\n.floating-label-form-group-with-value label {\n  top: 0;\n  opacity: 1; }\n\n.floating-label-form-group-with-focus label {\n  color: #18BC9C; }\n\nform .row:first-child .floating-label-form-group {\n  border-top: 1px solid #e9ecef; }\n\n.footer {\n  padding-top: 5rem;\n  padding-bottom: 5rem;\n  background-color: #2C3E50;\n  color: #fff; }\n\n.copyright {\n  background-color: #1a252f; }\n\na {\n  color: #18BC9C; }\n  a:focus, a:hover, a:active {\n    color: #128f76; }\n\n.btn {\n  border-width: 2px; }\n\n.bg-primary {\n  background-color: #18BC9C !important; }\n\n.bg-secondary {\n  background-color: #2C3E50 !important; }\n\n.text-primary {\n  color: #18BC9C !important; }\n\n.text-secondary {\n  color: #2C3E50 !important; }\n\n.btn-primary {\n  background-color: #18BC9C;\n  border-color: #18BC9C; }\n  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {\n    background-color: #128f76;\n    border-color: #128f76; }\n\n.btn-secondary {\n  background-color: #2C3E50;\n  border-color: #2C3E50; }\n  .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {\n    background-color: #1a252f;\n    border-color: #1a252f; }\n\nbody {\n  background: white !important;\n  padding: 0;\n  margin: 0;\n  font-family: 'Lato', sans-serif; }\n", ""]);
 
 // exports
 
@@ -27702,15 +27702,723 @@ var Home = function (_React$Component) {
   }
 
   _createClass(Home, [{
-    key: 'render',
+    key: "render",
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        "div",
         null,
         _react2.default.createElement(
-          'h1',
-          null,
-          'Home'
+          "nav",
+          { className: "navbar navbar-expand-lg bg-secondary fixed-top text-uppercase", id: "mainNav" },
+          _react2.default.createElement(
+            "div",
+            { className: "container" },
+            _react2.default.createElement(
+              "a",
+              { className: "navbar-brand js-scroll-trigger", href: "#page-top" },
+              "Drive Smart"
+            ),
+            _react2.default.createElement(
+              "button",
+              { className: "navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded", type: "button", "data-toggle": "collapse", "data-target": "#navbarResponsive", "aria-controls": "navbarResponsive", "aria-expanded": "false", "aria-label": "Toggle navigation" },
+              "Menu",
+              _react2.default.createElement("i", { className: "fas fa-bars" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "collapse navbar-collapse", id: "navbarResponsive" },
+              _react2.default.createElement(
+                "ul",
+                { className: "navbar-nav ml-auto" },
+                _react2.default.createElement(
+                  "li",
+                  { className: "nav-item mx-0 mx-lg-1" },
+                  _react2.default.createElement(
+                    "a",
+                    { className: "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger", href: "#portfolio" },
+                    "Portfolio"
+                  )
+                ),
+                _react2.default.createElement(
+                  "li",
+                  { className: "nav-item mx-0 mx-lg-1" },
+                  _react2.default.createElement(
+                    "a",
+                    { className: "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger", href: "#about" },
+                    "About"
+                  )
+                ),
+                _react2.default.createElement(
+                  "li",
+                  { className: "nav-item mx-0 mx-lg-1" },
+                  _react2.default.createElement(
+                    "a",
+                    { className: "nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger", href: "#contact" },
+                    "Contact"
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "header",
+          { className: "masthead bg-primary text-white text-center" },
+          _react2.default.createElement(
+            "div",
+            { className: "container" },
+            _react2.default.createElement(
+              "h1",
+              { className: "text-uppercase mb-0" },
+              "Plan For Success"
+            ),
+            _react2.default.createElement("hr", { className: "star-light" }),
+            _react2.default.createElement(
+              "h2",
+              { className: "font-weight-light mb-0" },
+              "Drive Smart is a utility application used to give users insight into optimal times for driving uber/lyft"
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "section",
+          { className: "portfolio", id: "portfolio" },
+          _react2.default.createElement(
+            "div",
+            { className: "container" },
+            _react2.default.createElement(
+              "h2",
+              { className: "text-center text-uppercase text-secondary mb-0" },
+              "Best Times"
+            ),
+            _react2.default.createElement("hr", { className: "star-dark mb-5" }),
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
+                "div",
+                { className: "col-md-6 col-lg-4" },
+                _react2.default.createElement(
+                  "a",
+                  { className: "portfolio-item d-block mx-auto", href: "#portfolio-modal-1" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "portfolio-item-caption d-flex position-absolute h-100 w-100" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "portfolio-item-caption-content my-auto w-100 text-center text-white" },
+                      _react2.default.createElement("i", { className: "fas fa-search-plus fa-3x" })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-md-6 col-lg-4" },
+                _react2.default.createElement(
+                  "a",
+                  { className: "portfolio-item d-block mx-auto", href: "#portfolio-modal-2" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "portfolio-item-caption d-flex position-absolute h-100 w-100" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "portfolio-item-caption-content my-auto w-100 text-center text-white" },
+                      _react2.default.createElement("i", { className: "fas fa-search-plus fa-3x" })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-md-6 col-lg-4" },
+                _react2.default.createElement(
+                  "a",
+                  { className: "portfolio-item d-block mx-auto", href: "#portfolio-modal-3" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "portfolio-item-caption d-flex position-absolute h-100 w-100" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "portfolio-item-caption-content my-auto w-100 text-center text-white" },
+                      _react2.default.createElement("i", { className: "fas fa-search-plus fa-3x" })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-md-6 col-lg-4" },
+                _react2.default.createElement(
+                  "a",
+                  { className: "portfolio-item d-block mx-auto", href: "#portfolio-modal-4" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "portfolio-item-caption d-flex position-absolute h-100 w-100" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "portfolio-item-caption-content my-auto w-100 text-center text-white" },
+                      _react2.default.createElement("i", { className: "fas fa-search-plus fa-3x" })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-md-6 col-lg-4" },
+                _react2.default.createElement(
+                  "a",
+                  { className: "portfolio-item d-block mx-auto", href: "#portfolio-modal-5" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "portfolio-item-caption d-flex position-absolute h-100 w-100" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "portfolio-item-caption-content my-auto w-100 text-center text-white" },
+                      _react2.default.createElement("i", { className: "fas fa-search-plus fa-3x" })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-md-6 col-lg-4" },
+                _react2.default.createElement(
+                  "a",
+                  { className: "portfolio-item d-block mx-auto", href: "#portfolio-modal-6" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "portfolio-item-caption d-flex position-absolute h-100 w-100" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "portfolio-item-caption-content my-auto w-100 text-center text-white" },
+                      _react2.default.createElement("i", { className: "fas fa-search-plus fa-3x" })
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "section",
+          { className: "bg-primary text-white mb-0", id: "about" },
+          _react2.default.createElement(
+            "div",
+            { className: "container" },
+            _react2.default.createElement(
+              "h2",
+              { className: "text-center text-uppercase text-white" },
+              "About"
+            ),
+            _react2.default.createElement("hr", { className: "star-light mb-5" }),
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
+                "div",
+                { className: "col-lg-4 ml-auto" },
+                _react2.default.createElement(
+                  "p",
+                  { className: "lead" },
+                  "Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization."
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-lg-4 mr-auto" },
+                _react2.default.createElement(
+                  "p",
+                  { className: "lead" },
+                  "Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!"
+                )
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "text-center mt-4" },
+              _react2.default.createElement(
+                "a",
+                { className: "btn btn-xl btn-outline-light", href: "#" },
+                _react2.default.createElement("i", { className: "fas fa-download mr-2" }),
+                "Download Now!"
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "section",
+          { id: "contact" },
+          _react2.default.createElement(
+            "div",
+            { className: "container" },
+            _react2.default.createElement(
+              "h2",
+              { className: "text-center text-uppercase text-secondary mb-0" },
+              "Contact Me"
+            ),
+            _react2.default.createElement("hr", { className: "star-dark mb-5" }),
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
+                "div",
+                { className: "col-lg-8 mx-auto" },
+                _react2.default.createElement(
+                  "form",
+                  { name: "sentMessage", id: "contactForm", noValidate: "noValidate" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "control-group" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "form-group floating-label-form-group controls mb-0 pb-2" },
+                      _react2.default.createElement(
+                        "label",
+                        null,
+                        "Name"
+                      ),
+                      _react2.default.createElement("input", { className: "form-control", id: "name", type: "text", placeholder: "Name", required: "required", "data-validation-required-message": "Please enter your name." }),
+                      _react2.default.createElement("p", { className: "help-block text-danger" })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "control-group" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "form-group floating-label-form-group controls mb-0 pb-2" },
+                      _react2.default.createElement(
+                        "label",
+                        null,
+                        "Email Address"
+                      ),
+                      _react2.default.createElement("input", { className: "form-control", id: "email", type: "email", placeholder: "Email Address", required: "required", "data-validation-required-message": "Please enter your email address." }),
+                      _react2.default.createElement("p", { className: "help-block text-danger" })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "control-group" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "form-group floating-label-form-group controls mb-0 pb-2" },
+                      _react2.default.createElement(
+                        "label",
+                        null,
+                        "Phone Number"
+                      ),
+                      _react2.default.createElement("input", { className: "form-control", id: "phone", type: "tel", placeholder: "Phone Number", required: "required", "data-validation-required-message": "Please enter your phone number." }),
+                      _react2.default.createElement("p", { className: "help-block text-danger" })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "control-group" },
+                    _react2.default.createElement(
+                      "div",
+                      { className: "form-group floating-label-form-group controls mb-0 pb-2" },
+                      _react2.default.createElement(
+                        "label",
+                        null,
+                        "Message"
+                      ),
+                      _react2.default.createElement("textarea", { className: "form-control", id: "message", rows: "5", placeholder: "Message", required: "required", "data-validation-required-message": "Please enter a message." }),
+                      _react2.default.createElement("p", { className: "help-block text-danger" })
+                    )
+                  ),
+                  _react2.default.createElement("div", { id: "success" }),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "form-group" },
+                    _react2.default.createElement(
+                      "button",
+                      { type: "submit", className: "btn btn-primary btn-xl", id: "sendMessageButton" },
+                      "Send"
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "footer",
+          { className: "footer text-center" },
+          _react2.default.createElement(
+            "div",
+            { className: "container" },
+            _react2.default.createElement(
+              "div",
+              { className: "row" },
+              _react2.default.createElement(
+                "div",
+                { className: "col-md-4 mb-5 mb-lg-0" },
+                _react2.default.createElement(
+                  "h4",
+                  { className: "text-uppercase mb-4" },
+                  "Location"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  { className: "lead mb-0" },
+                  "2215 John Daniel Drive"
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-md-4 mb-5 mb-lg-0" },
+                _react2.default.createElement(
+                  "h4",
+                  { className: "text-uppercase mb-4" },
+                  "Around the Web"
+                ),
+                _react2.default.createElement(
+                  "ul",
+                  { className: "list-inline mb-0" },
+                  _react2.default.createElement(
+                    "li",
+                    { className: "list-inline-item" },
+                    _react2.default.createElement(
+                      "a",
+                      { className: "btn btn-outline-light btn-social text-center rounded-circle", href: "#" },
+                      _react2.default.createElement("i", { className: "fab fa-fw fa-facebook-f" })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    { className: "list-inline-item" },
+                    _react2.default.createElement(
+                      "a",
+                      { className: "btn btn-outline-light btn-social text-center rounded-circle", href: "#" },
+                      _react2.default.createElement("i", { className: "fab fa-fw fa-google-plus-g" })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    { className: "list-inline-item" },
+                    _react2.default.createElement(
+                      "a",
+                      { className: "btn btn-outline-light btn-social text-center rounded-circle", href: "#" },
+                      _react2.default.createElement("i", { className: "fab fa-fw fa-twitter" })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    { className: "list-inline-item" },
+                    _react2.default.createElement(
+                      "a",
+                      { className: "btn btn-outline-light btn-social text-center rounded-circle", href: "#" },
+                      _react2.default.createElement("i", { className: "fab fa-fw fa-linkedin-in" })
+                    )
+                  ),
+                  _react2.default.createElement(
+                    "li",
+                    { className: "list-inline-item" },
+                    _react2.default.createElement(
+                      "a",
+                      { className: "btn btn-outline-light btn-social text-center rounded-circle", href: "#" },
+                      _react2.default.createElement("i", { className: "fab fa-fw fa-dribbble" })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "col-md-4" },
+                _react2.default.createElement(
+                  "h4",
+                  { className: "text-uppercase mb-4" },
+                  "About Freelancer"
+                ),
+                _react2.default.createElement(
+                  "p",
+                  { className: "lead mb-0" },
+                  "Freelance is a free to use, open source Bootstrap theme created by",
+                  _react2.default.createElement(
+                    "a",
+                    { href: "http://startbootstrap.com" },
+                    "Plan Your Uber Schedule"
+                  ),
+                  "."
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "copyright py-4 text-center text-white" },
+          _react2.default.createElement(
+            "div",
+            { className: "container" },
+            _react2.default.createElement(
+              "small",
+              null,
+              "Copyright \xA9 Your Website 2018"
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "scroll-to-top d-lg-none position-fixed " },
+          _react2.default.createElement(
+            "a",
+            { className: "js-scroll-trigger d-block text-center text-white rounded", href: "#page-top" },
+            _react2.default.createElement("i", { className: "fa fa-chevron-up" })
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "portfolio-modal mfp-hide", id: "portfolio-modal-1" },
+          _react2.default.createElement(
+            "div",
+            { className: "portfolio-modal-dialog bg-white" },
+            _react2.default.createElement(
+              "a",
+              { className: "close-button d-none d-md-block portfolio-modal-dismiss", href: "#" },
+              _react2.default.createElement("i", { className: "fa fa-3x fa-times" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "container text-center" },
+              _react2.default.createElement(
+                "div",
+                { className: "row" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-lg-8 mx-auto" },
+                  _react2.default.createElement(
+                    "h2",
+                    { className: "text-secondary text-uppercase mb-0" },
+                    "Project Name"
+                  ),
+                  _react2.default.createElement("hr", { className: "star-dark mb-5" }),
+                  _react2.default.createElement(
+                    "p",
+                    { className: "mb-5" },
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam."
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { className: "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss", href: "#" },
+                    _react2.default.createElement("i", { className: "fa fa-close" }),
+                    "Close Project"
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "portfolio-modal mfp-hide", id: "portfolio-modal-2" },
+          _react2.default.createElement(
+            "div",
+            { className: "portfolio-modal-dialog bg-white" },
+            _react2.default.createElement(
+              "a",
+              { className: "close-button d-none d-md-block portfolio-modal-dismiss", href: "#" },
+              _react2.default.createElement("i", { className: "fa fa-3x fa-times" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "container text-center" },
+              _react2.default.createElement(
+                "div",
+                { className: "row" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-lg-8 mx-auto" },
+                  _react2.default.createElement(
+                    "h2",
+                    { className: "text-secondary text-uppercase mb-0" },
+                    "Project Name"
+                  ),
+                  _react2.default.createElement("hr", { className: "star-dark mb-5" }),
+                  _react2.default.createElement(
+                    "p",
+                    { className: "mb-5" },
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam."
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { className: "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss", href: "#" },
+                    _react2.default.createElement("i", { className: "fa fa-close" }),
+                    "Close Project"
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "portfolio-modal mfp-hide", id: "portfolio-modal-3" },
+          _react2.default.createElement(
+            "div",
+            { className: "portfolio-modal-dialog bg-white" },
+            _react2.default.createElement(
+              "a",
+              { className: "close-button d-none d-md-block portfolio-modal-dismiss", href: "#" },
+              _react2.default.createElement("i", { className: "fa fa-3x fa-times" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "container text-center" },
+              _react2.default.createElement(
+                "div",
+                { className: "row" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-lg-8 mx-auto" },
+                  _react2.default.createElement(
+                    "h2",
+                    { className: "text-secondary text-uppercase mb-0" },
+                    "Project Name"
+                  ),
+                  _react2.default.createElement("hr", { className: "star-dark mb-5" }),
+                  _react2.default.createElement(
+                    "p",
+                    { className: "mb-5" },
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam."
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { className: "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss", href: "#" },
+                    _react2.default.createElement("i", { className: "fa fa-close" }),
+                    "Close Project"
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "portfolio-modal mfp-hide", id: "portfolio-modal-4" },
+          _react2.default.createElement(
+            "div",
+            { className: "portfolio-modal-dialog bg-white" },
+            _react2.default.createElement(
+              "a",
+              { className: "close-button d-none d-md-block portfolio-modal-dismiss", href: "#" },
+              _react2.default.createElement("i", { className: "fa fa-3x fa-times" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "container text-center" },
+              _react2.default.createElement(
+                "div",
+                { className: "row" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-lg-8 mx-auto" },
+                  _react2.default.createElement(
+                    "h2",
+                    { className: "text-secondary text-uppercase mb-0" },
+                    "Project Name"
+                  ),
+                  _react2.default.createElement("hr", { className: "star-dark mb-5" }),
+                  _react2.default.createElement(
+                    "p",
+                    { className: "mb-5" },
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam."
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { className: "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss", href: "#" },
+                    _react2.default.createElement("i", { className: "fa fa-close" }),
+                    "Close Project"
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "portfolio-modal mfp-hide", id: "portfolio-modal-5" },
+          _react2.default.createElement(
+            "div",
+            { className: "portfolio-modal-dialog bg-white" },
+            _react2.default.createElement(
+              "a",
+              { className: "close-button d-none d-md-block portfolio-modal-dismiss", href: "#" },
+              _react2.default.createElement("i", { className: "fa fa-3x fa-times" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "container text-center" },
+              _react2.default.createElement(
+                "div",
+                { className: "row" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-lg-8 mx-auto" },
+                  _react2.default.createElement(
+                    "h2",
+                    { className: "text-secondary text-uppercase mb-0" },
+                    "Project Name"
+                  ),
+                  _react2.default.createElement("hr", { className: "star-dark mb-5" }),
+                  _react2.default.createElement(
+                    "p",
+                    { className: "mb-5" },
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam."
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { className: "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss", href: "#" },
+                    _react2.default.createElement("i", { className: "fa fa-close" }),
+                    "Close Project"
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "portfolio-modal mfp-hide", id: "portfolio-modal-6" },
+          _react2.default.createElement(
+            "div",
+            { className: "portfolio-modal-dialog bg-white" },
+            _react2.default.createElement(
+              "a",
+              { className: "close-button d-none d-md-block portfolio-modal-dismiss", href: "#" },
+              _react2.default.createElement("i", { className: "fa fa-3x fa-times" })
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "container text-center" },
+              _react2.default.createElement(
+                "div",
+                { className: "row" },
+                _react2.default.createElement(
+                  "div",
+                  { className: "col-lg-8 mx-auto" },
+                  _react2.default.createElement(
+                    "h2",
+                    { className: "text-secondary text-uppercase mb-0" },
+                    "Project Name"
+                  ),
+                  _react2.default.createElement("hr", { className: "star-dark mb-5" }),
+                  _react2.default.createElement(
+                    "p",
+                    { className: "mb-5" },
+                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam."
+                  ),
+                  _react2.default.createElement(
+                    "a",
+                    { className: "btn btn-primary btn-lg rounded-pill portfolio-modal-dismiss", href: "#" },
+                    _react2.default.createElement("i", { className: "fa fa-close" }),
+                    "Close Project"
+                  )
+                )
+              )
+            )
+          )
         )
       );
     }
