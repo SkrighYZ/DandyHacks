@@ -105,22 +105,21 @@ class Uber extends React.Component {
          latitude: position.coords.latitude,
          longitude: position.coords.longitude
         });
-        //console.log(this.state);
+
+        var pyrmont = {lat: this.state.latitude, lng: this.state.longitude};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 14});
+
+        var infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+            location: pyrmont,
+            radius: 10000,
+            type: ['airport']
+        }, callback);
       }
     )
-
-    var pyrmont = {lat: this.state.latitude, lng: this.state.longitude};
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: pyrmont,
-      zoom: 12});
-
-    var infowindow = new google.maps.InfoWindow();
-    var service = new google.maps.places.PlacesService(map);
-    service.nearbySearch({
-        location: pyrmont,
-        radius: 10000,
-        type: ['airport']
-    }, callback);
   }
 
 

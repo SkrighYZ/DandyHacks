@@ -4,9 +4,11 @@ class EventDataService {
 
   getEventData(callback) {
 
+    console.log("This is happening")
+
     var parseString = require('xml2js').parseString;
 
-    var url = 'http://api.eventful.com/rest/events/search?app_key=PTc4mmXnq37xG6Cz&where=43,-77&within=25&date=2018102600-2018113000&sort_by=popularity&page_size=100'
+    var url = 'https://api.eventful.com/rest/events/search?app_key=PTc4mmXnq37xG6Cz&where=43,-77&within=25&date=2018102600-2018113000&sort_by=popularity&page_size=100'
     var options = {
       method: 'get',
       url: url

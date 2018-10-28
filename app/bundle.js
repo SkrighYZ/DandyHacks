@@ -81031,21 +81031,20 @@ var Uber = function (_React$Component) {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude
         });
-        //console.log(this.state);
+
+        var pyrmont = { lat: _this2.state.latitude, lng: _this2.state.longitude };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 14 });
+
+        var infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: pyrmont,
+          radius: 10000,
+          type: ['airport']
+        }, callback);
       });
-
-      var pyrmont = { lat: this.state.latitude, lng: this.state.longitude };
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: pyrmont,
-        zoom: 12 });
-
-      var infowindow = new google.maps.InfoWindow();
-      var service = new google.maps.places.PlacesService(map);
-      service.nearbySearch({
-        location: pyrmont,
-        radius: 10000,
-        type: ['airport']
-      }, callback);
     }
   }, {
     key: 'render',
@@ -123624,7 +123623,19 @@ var Lyft = function (_React$Component) {
           latitude: position.coords.latitude,
           longitude: position.coords.longitude
         });
-        //console.log(this.state);
+
+        var pyrmont = { lat: _this2.state.latitude, lng: _this2.state.longitude };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 14 });
+
+        var infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: pyrmont,
+          radius: 10000,
+          type: ['airport']
+        }, callback);
       });
 
       var ctx = document.getElementById("studentChart");
@@ -123651,19 +123662,6 @@ var Lyft = function (_React$Component) {
           }
         }
       });
-
-      var pyrmont = { lat: this.state.latitude, lng: this.state.longitude };
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: pyrmont,
-        zoom: 12 });
-
-      var infowindow = new google.maps.InfoWindow();
-      var service = new google.maps.places.PlacesService(map);
-      service.nearbySearch({
-        location: pyrmont,
-        radius: 10000,
-        type: ['airport']
-      }, callback);
 
       this.eventDataService.getEventData(function (events) {
         console.log("events", events);
@@ -123860,9 +123858,11 @@ var EventDataService = function () {
     key: 'getEventData',
     value: function getEventData(callback) {
 
+      console.log("This is happening");
+
       var parseString = __webpack_require__(796).parseString;
 
-      var url = 'http://api.eventful.com/rest/events/search?app_key=PTc4mmXnq37xG6Cz&where=43,-77&within=25&date=2018102600-2018113000&sort_by=popularity&page_size=100';
+      var url = 'https://api.eventful.com/rest/events/search?app_key=PTc4mmXnq37xG6Cz&where=43,-77&within=25&date=2018102600-2018113000&sort_by=popularity&page_size=100';
       var options = {
         method: 'get',
         url: url
