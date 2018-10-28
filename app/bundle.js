@@ -63360,7 +63360,7 @@ exports = module.exports = __webpack_require__(392)(false);
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Lato'; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-weight: 700;\n  font-family: 'Montserrat'; }\n\nhr.star-light,\nhr.star-dark {\n  max-width: 15rem;\n  padding: 0;\n  text-align: center;\n  border: none;\n  border-top: solid 0.25rem;\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem;\n  margin-left: auto;\n  margin-right: auto; }\n\nhr.star-light:after,\nhr.star-dark:after {\n  position: relative;\n  top: -.8em;\n  display: inline-block;\n  padding: 0 0.25em;\n  content: '\\F005';\n  font-family: \"Font Awesome 5 Free\";\n  font-weight: 900;\n  font-size: 2em; }\n\nhr.star-light {\n  border-color: #fff; }\n\nhr.star-light:after {\n  color: #fff;\n  background-color: #18BC9C; }\n\nhr.star-dark {\n  border-color: #2C3E50; }\n\nhr.star-dark:after {\n  color: #2C3E50;\n  background-color: white; }\n\nsection {\n  padding: 6rem 0; }\n  section h2 {\n    font-size: 2.25rem;\n    line-height: 2rem; }\n  @media (min-width: 992px) {\n    section h2 {\n      font-size: 3rem;\n      line-height: 2.5rem; } }\n\n.btn-xl {\n  padding: 1rem 1.75rem;\n  font-size: 1.25rem; }\n\n.btn-social {\n  width: 3.25rem;\n  height: 3.25rem;\n  font-size: 1.25rem;\n  line-height: 2rem; }\n\n.scroll-to-top {\n  z-index: 1042;\n  right: 1rem;\n  bottom: 1rem;\n  display: none; }\n  .scroll-to-top a {\n    width: 3.5rem;\n    height: 3.5rem;\n    background-color: rgba(33, 37, 41, 0.5);\n    line-height: 3.1rem; }\n\n#mainNav {\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  font-weight: 700;\n  font-family: 'Montserrat'; }\n  #mainNav .navbar-brand {\n    color: #fff; }\n  #mainNav .navbar-nav {\n    margin-top: 1rem;\n    letter-spacing: 0.0625rem; }\n    #mainNav .navbar-nav li.nav-item a.nav-link {\n      color: #fff; }\n      #mainNav .navbar-nav li.nav-item a.nav-link:hover {\n        color: #18BC9C; }\n      #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {\n        color: #fff; }\n      #mainNav .navbar-nav li.nav-item a.nav-link.active {\n        color: #18BC9C; }\n  #mainNav .navbar-toggler {\n    font-size: 80%;\n    padding: 0.8rem; }\n\n@media (min-width: 992px) {\n  #mainNav {\n    padding-top: 1.5rem;\n    padding-bottom: 1.5rem;\n    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;\n    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;\n    transition: padding-top 0.3s, padding-bottom 0.3s; }\n    #mainNav .navbar-brand {\n      font-size: 2em;\n      -webkit-transition: font-size 0.3s;\n      -moz-transition: font-size 0.3s;\n      transition: font-size 0.3s; }\n    #mainNav .navbar-nav {\n      margin-top: 0; }\n    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {\n      color: #fff;\n      background: #18BC9C; }\n      #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {\n        color: #fff;\n        background: #18BC9C; }\n  #mainNav.navbar-shrink {\n    padding-top: 0.5rem;\n    padding-bottom: 0.5rem; }\n    #mainNav.navbar-shrink .navbar-brand {\n      font-size: 1.5em; } }\n\nheader.masthead {\n  padding-top: calc(6rem + 72px);\n  padding-bottom: 6rem; }\n  header.masthead h1 {\n    font-size: 3rem;\n    line-height: 3rem; }\n  header.masthead h2 {\n    font-size: 1.3rem;\n    font-family: 'Lato'; }\n\n@media (min-width: 992px) {\n  header.masthead {\n    padding-top: calc(6rem + 106px);\n    padding-bottom: 6rem; }\n    header.masthead h1 {\n      font-size: 4.75em;\n      line-height: 4rem; }\n    header.masthead h2 {\n      font-size: 1.75em; } }\n\n.portfolio {\n  margin-bottom: -15px; }\n  .portfolio .portfolio-item {\n    position: relative;\n    display: block;\n    max-width: 25rem;\n    margin-bottom: 15px; }\n    .portfolio .portfolio-item .portfolio-item-caption {\n      -webkit-transition: all ease 0.5s;\n      -moz-transition: all ease 0.5s;\n      transition: all ease 0.5s;\n      opacity: 0;\n      background-color: rgba(24, 188, 156, 0.9); }\n      .portfolio .portfolio-item .portfolio-item-caption:hover {\n        opacity: 1; }\n      .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {\n        font-size: 1.5rem; }\n  @media (min-width: 576px) {\n    .portfolio {\n      margin-bottom: -30px; }\n      .portfolio .portfolio-item {\n        margin-bottom: 30px; } }\n\n.portfolio-modal .portfolio-modal-dialog {\n  padding: 3rem 1rem;\n  min-height: calc(100vh - 2rem);\n  margin: 1rem calc(1rem - 8px);\n  position: relative;\n  z-index: 2;\n  -moz-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);\n  box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5); }\n  .portfolio-modal .portfolio-modal-dialog .close-button {\n    position: absolute;\n    top: 2rem;\n    right: 2rem; }\n    .portfolio-modal .portfolio-modal-dialog .close-button i {\n      line-height: 38px; }\n  .portfolio-modal .portfolio-modal-dialog h2 {\n    font-size: 2rem; }\n\n@media (min-width: 768px) {\n  .portfolio-modal .portfolio-modal-dialog {\n    min-height: 100vh;\n    padding: 5rem;\n    margin: 3rem calc(3rem - 8px); }\n    .portfolio-modal .portfolio-modal-dialog h2 {\n      font-size: 3rem; } }\n\n.floating-label-form-group {\n  position: relative;\n  border-bottom: 1px solid #e9ecef; }\n  .floating-label-form-group input,\n  .floating-label-form-group textarea {\n    font-size: 1.5em;\n    position: relative;\n    z-index: 1;\n    padding-right: 0;\n    padding-left: 0;\n    resize: none;\n    border: none;\n    border-radius: 0;\n    background: none;\n    box-shadow: none !important; }\n  .floating-label-form-group label {\n    font-size: 0.85em;\n    line-height: 1.764705882em;\n    position: relative;\n    z-index: 0;\n    top: 2em;\n    display: block;\n    margin: 0;\n    -webkit-transition: top 0.3s ease, opacity 0.3s ease;\n    -moz-transition: top 0.3s ease, opacity 0.3s ease;\n    -ms-transition: top 0.3s ease, opacity 0.3s ease;\n    transition: top 0.3s ease, opacity 0.3s ease;\n    vertical-align: middle;\n    vertical-align: baseline;\n    opacity: 0; }\n  .floating-label-form-group:not(:first-child) {\n    padding-left: 14px;\n    border-left: 1px solid #e9ecef; }\n\n.floating-label-form-group-with-value label {\n  top: 0;\n  opacity: 1; }\n\n.floating-label-form-group-with-focus label {\n  color: #18BC9C; }\n\nform .row:first-child .floating-label-form-group {\n  border-top: 1px solid #e9ecef; }\n\n.footer {\n  padding-top: 5rem;\n  padding-bottom: 5rem;\n  background-color: #2C3E50;\n  color: #fff; }\n\n.copyright {\n  background-color: #1a252f; }\n\na {\n  color: #18BC9C; }\n  a:focus, a:hover, a:active {\n    color: #128f76; }\n\n.btn {\n  border-width: 2px; }\n\n.bg-primary {\n  background-color: #18BC9C !important; }\n\n.bg-secondary {\n  background-color: #2C3E50 !important; }\n\n.text-primary {\n  color: #18BC9C !important; }\n\n.text-secondary {\n  color: #2C3E50 !important; }\n\n.btn-primary {\n  background-color: #18BC9C;\n  border-color: #18BC9C; }\n  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {\n    background-color: #128f76;\n    border-color: #128f76; }\n\n.btn-secondary {\n  background-color: #2C3E50;\n  border-color: #2C3E50; }\n  .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {\n    background-color: #1a252f;\n    border-color: #1a252f; }\n\n#uberHeader {\n  background-color: white !important; }\n\n.uberLogo {\n  display: block;\n  max-width: 230px;\n  max-height: 95px;\n  width: auto;\n  height: auto;\n  margin: auto; }\n\n#uberTitle {\n  font-family: 'Raleway', sans-serif;\n  color: #09091a; }\n\n#lyftHeader {\n  background-color: white !important; }\n\n.lyftLogo {\n  display: block;\n  max-width: 230px;\n  max-height: 95px;\n  width: auto;\n  height: auto;\n  margin: auto; }\n\nbody {\n  background: white !important;\n  padding: 0;\n  margin: 0;\n  font-family: 'Lato', sans-serif; }\n\n#map {\n  width: 100% !important;\n  height: 30rem !important;\n  margin: auto; }\n\n#studentChart {\n  width: 50rem !important;\n  height: 25rem !important;\n  margin: auto !important; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'Lato'; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-weight: 700;\n  font-family: 'Montserrat'; }\n\nhr.star-light,\nhr.star-dark {\n  max-width: 15rem;\n  padding: 0;\n  text-align: center;\n  border: none;\n  border-top: solid 0.25rem;\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem;\n  margin-left: auto;\n  margin-right: auto; }\n\nhr.star-light:after,\nhr.star-dark:after {\n  position: relative;\n  top: -.8em;\n  display: inline-block;\n  padding: 0 0.25em;\n  content: '\\F005';\n  font-family: \"Font Awesome 5 Free\";\n  font-weight: 900;\n  font-size: 2em; }\n\nhr.star-light {\n  border-color: #fff; }\n\nhr.star-light:after {\n  color: #fff;\n  background-color: #18BC9C; }\n\nhr.star-dark {\n  border-color: #2C3E50; }\n\nhr.star-dark:after {\n  color: #2C3E50;\n  background-color: white; }\n\nsection {\n  padding: 6rem 0; }\n  section h2 {\n    font-size: 2.25rem;\n    line-height: 2rem; }\n  @media (min-width: 992px) {\n    section h2 {\n      font-size: 3rem;\n      line-height: 2.5rem; } }\n\n.btn-xl {\n  padding: 1rem 1.75rem;\n  font-size: 1.25rem; }\n\n.btn-social {\n  width: 3.25rem;\n  height: 3.25rem;\n  font-size: 1.25rem;\n  line-height: 2rem; }\n\n.scroll-to-top {\n  z-index: 1042;\n  right: 1rem;\n  bottom: 1rem;\n  display: none; }\n  .scroll-to-top a {\n    width: 3.5rem;\n    height: 3.5rem;\n    background-color: rgba(33, 37, 41, 0.5);\n    line-height: 3.1rem; }\n\n#mainNav {\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  font-weight: 700;\n  font-family: 'Montserrat'; }\n  #mainNav .navbar-brand {\n    color: #fff; }\n  #mainNav .navbar-nav {\n    margin-top: 1rem;\n    letter-spacing: 0.0625rem; }\n    #mainNav .navbar-nav li.nav-item a.nav-link {\n      color: #fff; }\n      #mainNav .navbar-nav li.nav-item a.nav-link:hover {\n        color: #18BC9C; }\n      #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {\n        color: #fff; }\n      #mainNav .navbar-nav li.nav-item a.nav-link.active {\n        color: #18BC9C; }\n  #mainNav .navbar-toggler {\n    font-size: 80%;\n    padding: 0.8rem; }\n\n@media (min-width: 992px) {\n  #mainNav {\n    padding-top: 1.5rem;\n    padding-bottom: 1.5rem;\n    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;\n    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;\n    transition: padding-top 0.3s, padding-bottom 0.3s; }\n    #mainNav .navbar-brand {\n      font-size: 2em;\n      -webkit-transition: font-size 0.3s;\n      -moz-transition: font-size 0.3s;\n      transition: font-size 0.3s; }\n    #mainNav .navbar-nav {\n      margin-top: 0; }\n    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {\n      color: #fff;\n      background: #18BC9C; }\n      #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {\n        color: #fff;\n        background: #18BC9C; }\n  #mainNav.navbar-shrink {\n    padding-top: 0.5rem;\n    padding-bottom: 0.5rem; }\n    #mainNav.navbar-shrink .navbar-brand {\n      font-size: 1.5em; } }\n\nheader.masthead {\n  padding-top: calc(6rem + 72px);\n  padding-bottom: 6rem; }\n  header.masthead h1 {\n    font-size: 3rem;\n    line-height: 3rem; }\n  header.masthead h2 {\n    font-size: 1.3rem;\n    font-family: 'Lato'; }\n\n@media (min-width: 992px) {\n  header.masthead {\n    padding-top: calc(6rem + 106px);\n    padding-bottom: 6rem; }\n    header.masthead h1 {\n      font-size: 4.75em;\n      line-height: 4rem; }\n    header.masthead h2 {\n      font-size: 1.75em; } }\n\n.portfolio {\n  margin-bottom: -15px; }\n  .portfolio .portfolio-item {\n    position: relative;\n    display: block;\n    max-width: 25rem;\n    margin-bottom: 15px; }\n    .portfolio .portfolio-item .portfolio-item-caption {\n      -webkit-transition: all ease 0.5s;\n      -moz-transition: all ease 0.5s;\n      transition: all ease 0.5s;\n      opacity: 0;\n      background-color: rgba(24, 188, 156, 0.9); }\n      .portfolio .portfolio-item .portfolio-item-caption:hover {\n        opacity: 1; }\n      .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {\n        font-size: 1.5rem; }\n  @media (min-width: 576px) {\n    .portfolio {\n      margin-bottom: -30px; }\n      .portfolio .portfolio-item {\n        margin-bottom: 30px; } }\n\n.portfolio-modal .portfolio-modal-dialog {\n  padding: 3rem 1rem;\n  min-height: calc(100vh - 2rem);\n  margin: 1rem calc(1rem - 8px);\n  position: relative;\n  z-index: 2;\n  -moz-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);\n  box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5); }\n  .portfolio-modal .portfolio-modal-dialog .close-button {\n    position: absolute;\n    top: 2rem;\n    right: 2rem; }\n    .portfolio-modal .portfolio-modal-dialog .close-button i {\n      line-height: 38px; }\n  .portfolio-modal .portfolio-modal-dialog h2 {\n    font-size: 2rem; }\n\n@media (min-width: 768px) {\n  .portfolio-modal .portfolio-modal-dialog {\n    min-height: 100vh;\n    padding: 5rem;\n    margin: 3rem calc(3rem - 8px); }\n    .portfolio-modal .portfolio-modal-dialog h2 {\n      font-size: 3rem; } }\n\n.floating-label-form-group {\n  position: relative;\n  border-bottom: 1px solid #e9ecef; }\n  .floating-label-form-group input,\n  .floating-label-form-group textarea {\n    font-size: 1.5em;\n    position: relative;\n    z-index: 1;\n    padding-right: 0;\n    padding-left: 0;\n    resize: none;\n    border: none;\n    border-radius: 0;\n    background: none;\n    box-shadow: none !important; }\n  .floating-label-form-group label {\n    font-size: 0.85em;\n    line-height: 1.764705882em;\n    position: relative;\n    z-index: 0;\n    top: 2em;\n    display: block;\n    margin: 0;\n    -webkit-transition: top 0.3s ease, opacity 0.3s ease;\n    -moz-transition: top 0.3s ease, opacity 0.3s ease;\n    -ms-transition: top 0.3s ease, opacity 0.3s ease;\n    transition: top 0.3s ease, opacity 0.3s ease;\n    vertical-align: middle;\n    vertical-align: baseline;\n    opacity: 0; }\n  .floating-label-form-group:not(:first-child) {\n    padding-left: 14px;\n    border-left: 1px solid #e9ecef; }\n\n.floating-label-form-group-with-value label {\n  top: 0;\n  opacity: 1; }\n\n.floating-label-form-group-with-focus label {\n  color: #18BC9C; }\n\nform .row:first-child .floating-label-form-group {\n  border-top: 1px solid #e9ecef; }\n\n.footer {\n  padding-top: 5rem;\n  padding-bottom: 5rem;\n  background-color: #2C3E50;\n  color: #fff; }\n\n.copyright {\n  background-color: #1a252f; }\n\na {\n  color: #18BC9C; }\n  a:focus, a:hover, a:active {\n    color: #128f76; }\n\n.btn {\n  border-width: 2px; }\n\n.bg-primary {\n  background-color: #18BC9C !important; }\n\n.bg-secondary {\n  background-color: #2C3E50 !important; }\n\n.text-primary {\n  color: #18BC9C !important; }\n\n.text-secondary {\n  color: #2C3E50 !important; }\n\n.btn-primary {\n  background-color: #18BC9C;\n  border-color: #18BC9C; }\n  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {\n    background-color: #128f76;\n    border-color: #128f76; }\n\n.btn-secondary {\n  background-color: #2C3E50;\n  border-color: #2C3E50; }\n  .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {\n    background-color: #1a252f;\n    border-color: #1a252f; }\n\n#uberHeader {\n  background-color: white !important; }\n\n.uberLogo {\n  display: block;\n  max-width: 230px;\n  max-height: 95px;\n  width: auto;\n  height: auto;\n  margin: auto;\n  color: white !important; }\n\n#uberTitle {\n  font-family: 'Raleway', sans-serif;\n  color: #09091a; }\n\n#lyftHeader {\n  background-color: white !important; }\n\n.lyftLogo {\n  display: block;\n  max-width: 230px;\n  max-height: 95px;\n  width: auto;\n  height: auto;\n  margin: auto; }\n\n#lyftPageContainer {\n  background: #28BC9C !important;\n  color: white !important; }\n\n#timeTitle {\n  margin-bottom: 5rem !important; }\n\nbody {\n  background: white !important;\n  padding: 0;\n  margin: 0;\n  font-family: 'Lato', sans-serif; }\n\n#map {\n  width: 100% !important;\n  height: 30rem !important;\n  margin: auto; }\n\n#studentChart {\n  width: 50rem !important;\n  height: 25rem !important;\n  margin: auto !important; }\n", ""]);
 
 // exports
 
@@ -78283,7 +78283,7 @@ var Home = function (_React$Component) {
                 _react2.default.createElement(
                   "p",
                   { className: "lead" },
-                  "Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization."
+                  "In addition to providing users with the best times to work, we also aggregate data to help you determine where there might be the most opportunity."
                 )
               ),
               _react2.default.createElement(
@@ -78292,18 +78292,8 @@ var Home = function (_React$Component) {
                 _react2.default.createElement(
                   "p",
                   { className: "lead" },
-                  "Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!"
+                  "Whiplash uses a vast variety of data including flight times, events, and many other categories that would involve large populations of people. We perform statistical analysis on this data to help users peak in work performance as well as revenue"
                 )
-              )
-            ),
-            _react2.default.createElement(
-              "div",
-              { className: "text-center mt-4" },
-              _react2.default.createElement(
-                "a",
-                { className: "btn btn-xl btn-outline-light", href: "#" },
-                _react2.default.createElement("i", { className: "fas fa-download mr-2" }),
-                "Download Now!"
               )
             )
           )
@@ -78424,7 +78414,7 @@ var Home = function (_React$Component) {
                 _react2.default.createElement(
                   "p",
                   { className: "lead mb-0" },
-                  "2215 John Daniel Drive"
+                  "Dandy Hacks"
                 )
               ),
               _react2.default.createElement(
@@ -78433,7 +78423,7 @@ var Home = function (_React$Component) {
                 _react2.default.createElement(
                   "h4",
                   { className: "text-uppercase mb-4" },
-                  "Around the Web"
+                  "Social Media"
                 ),
                 _react2.default.createElement(
                   "ul",
@@ -78491,12 +78481,13 @@ var Home = function (_React$Component) {
                 _react2.default.createElement(
                   "h4",
                   { className: "text-uppercase mb-4" },
-                  "About Freelancer"
+                  "About Whip"
                 ),
                 _react2.default.createElement(
                   "p",
                   { className: "lead mb-0" },
-                  "Freelance is a free to use, open source Bootstrap theme created by",
+                  "Whip is free to use for every driver",
+                  _react2.default.createElement("br", null),
                   _react2.default.createElement(
                     "a",
                     { href: "http://startbootstrap.com" },
@@ -78517,7 +78508,7 @@ var Home = function (_React$Component) {
             _react2.default.createElement(
               "small",
               null,
-              "Copyright \xA9 Your Website 2018"
+              "Copyright \xA9 Whip 2018"
             )
           )
         ),
@@ -78946,18 +78937,16 @@ var Uber = function (_React$Component) {
     key: 'render',
     value: function render() {
 
-      var topChoices = ['hello'];
-
       return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
           'header',
-          { className: 'masthead bg-primary text-white text-center', id: 'uberHeader' },
+          { className: 'masthead bg-primary text-white text-center', id: 'lyftPageContainer' },
           _react2.default.createElement(
             'div',
             { className: 'container' },
-            _react2.default.createElement('img', { src: '../../assets/uber_2016_logo.png', className: 'uberLogo' })
+            _react2.default.createElement('img', { src: '../../assets/uber-white.png', className: 'uberLogo' })
           )
         ),
         _react2.default.createElement('hr', null),
@@ -78973,7 +78962,6 @@ var Uber = function (_React$Component) {
               'Top Choices'
             ),
             _react2.default.createElement('hr', { className: 'star-dark mb-5' }),
-            topChoices,
             _react2.default.createElement(
               'div',
               { className: 'row' },
@@ -121731,26 +121719,24 @@ var Lyft = function (_React$Component) {
         null,
         _react2.default.createElement(
           'header',
-          { className: 'masthead bg-primary text-white text-center', id: 'lyftHeader' },
+          { className: 'masthead bg-primary text-white text-center', id: 'lyftPageContainer' },
           _react2.default.createElement(
             'div',
             { className: 'container' },
-            _react2.default.createElement('img', { src: '../../assets/lyft-logo.png', className: 'lyftLogo' })
+            _react2.default.createElement('img', { src: '../../assets/lyft-logo-white.png', className: 'lyftLogo' })
           )
         ),
-        _react2.default.createElement('hr', null),
         _react2.default.createElement(
           'section',
-          { className: 'portfolio', id: 'portfolio' },
+          { className: 'portfolio' },
           _react2.default.createElement(
             'div',
             { className: 'container' },
             _react2.default.createElement(
               'h2',
-              { className: 'text-center text-uppercase text-secondary mb-0' },
+              { className: 'text-center text-uppercase text-secondary mb-0', id: 'timeTitle' },
               'Time'
             ),
-            _react2.default.createElement('hr', { className: 'star-dark mb-5' }),
             _react2.default.createElement(
               'p',
               { className: 'lead' },

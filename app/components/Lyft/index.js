@@ -91,18 +91,16 @@ class Lyft extends React.Component {
     return (
       <div>
 
-      <header className="masthead bg-primary text-white text-center" id='lyftHeader'>
+      <header className="masthead bg-primary text-white text-center" id='lyftPageContainer'>
         <div className="container">
-        <img src='../../assets/lyft-logo.png' className='lyftLogo'></img>
+        <img src='../../assets/lyft-logo-white.png' className='lyftLogo'></img>
         </div>
       </header>
 
-      <hr></hr>
 
-      <section className="portfolio" id="portfolio">
+      <section className="portfolio">
         <div className="container">
-          <h2 className="text-center text-uppercase text-secondary mb-0">Time</h2>
-          <hr className="star-dark mb-5"></hr>
+          <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Time</h2>
           <p className="lead">Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day.
           Plan your driving schedule in advance through our easy to use service and add value to your time.
           </p>

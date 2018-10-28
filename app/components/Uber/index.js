@@ -127,14 +127,13 @@ class Uber extends React.Component {
 
   render() {
 
-    let topChoices = ['hello']
 
     return (
       <div>
 
-      <header className="masthead bg-primary text-white text-center" id="uberHeader">
+      <header className="masthead bg-primary text-white text-center" id='lyftPageContainer'>
         <div className="container">
-        <img src='../../assets/uber_2016_logo.png' className='uberLogo'></img>
+        <img src='../../assets/uber-white.png' className='uberLogo'></img>
         </div>
       </header>
 
@@ -144,7 +143,6 @@ class Uber extends React.Component {
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0">Top Choices</h2>
           <hr className="star-dark mb-5"></hr>
-          {topChoices}
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">

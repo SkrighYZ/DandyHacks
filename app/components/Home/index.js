@@ -92,17 +92,12 @@ class Home extends React.Component {
           <hr className="star-light mb-5"></hr>
           <div className="row">
             <div className="col-lg-4 ml-auto">
-              <p className="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+              <p className="lead">In addition to providing users with the best times to work, we also aggregate data to help you determine where there might be the most opportunity.</p>
             </div>
             <div className="col-lg-4 mr-auto">
-              <p className="lead">Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+              <p className="lead">Whiplash uses a vast variety of data including flight times, events, and many other categories that would involve large populations of people.
+               We perform statistical analysis on this data to help users peak in work performance as well as revenue</p>
             </div>
-          </div>
-          <div className="text-center mt-4">
-            <a className="btn btn-xl btn-outline-light" href="#">
-              <i className="fas fa-download mr-2"></i>
-              Download Now!
-            </a>
           </div>
         </div>
       </section>
@@ -157,10 +152,10 @@ class Home extends React.Component {
           <div className="row">
             <div className="col-md-4 mb-5 mb-lg-0">
               <h4 className="text-uppercase mb-4">Location</h4>
-              <p className="lead mb-0">2215 John Daniel Drive</p>
+              <p className="lead mb-0">Dandy Hacks</p>
             </div>
             <div className="col-md-4 mb-5 mb-lg-0">
-              <h4 className="text-uppercase mb-4">Around the Web</h4>
+              <h4 className="text-uppercase mb-4">Social Media</h4>
               <ul className="list-inline mb-0">
                 <li className="list-inline-item">
                   <a className="btn btn-outline-light btn-social text-center rounded-circle" href="#">
@@ -190,8 +185,8 @@ class Home extends React.Component {
               </ul>
             </div>
             <div className="col-md-4">
-              <h4 className="text-uppercase mb-4">About Freelancer</h4>
-              <p className="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
+              <h4 className="text-uppercase mb-4">About Whip</h4>
+              <p className="lead mb-0">Whip is free to use for every driver<br></br>
                 <a href="http://startbootstrap.com">Plan Your Uber Schedule</a>.</p>
             </div>
           </div>
@@ -200,7 +195,7 @@ class Home extends React.Component {
 
       <div className="copyright py-4 text-center text-white">
         <div className="container">
-          <small>Copyright &copy; Your Website 2018</small>
+          <small>Copyright &copy; Whip 2018</small>
         </div>
       </div>
 

@@ -291,7 +291,8 @@ a {
   max-height: 95px;
   width: auto;
   height: auto;
-  margin: auto; }
+  margin: auto;
+  color: white !important; }
 
 #uberTitle {
   font-family: 'Raleway', sans-serif;
@@ -307,6 +308,13 @@ a {
   width: auto;
   height: auto;
   margin: auto; }
+
+#lyftPageContainer {
+  background: #28BC9C !important;
+  color: white !important; }
+
+#timeTitle {
+  margin-bottom: 5rem !important; }
 
 body {
   background: white !important;
