@@ -1,6 +1,6 @@
 import React from 'react'
 import FlightDataService from '../../services/FlightDataService/index'
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import Chart from 'chart.js';
 
 class Lyft extends React.Component {
 
@@ -33,53 +33,138 @@ class Lyft extends React.Component {
         console.log(this.state);
       }
     );
+
+    var ctx = document.getElementById("studentChart");
+
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
+        datasets: [{
+            label: 'Frequently discussed topics',
+            data: [12, 19, 3, 1, 2, 43],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
   }
 
   render() {
-
-    const mapStyles = {
-      width: '100%',
-      height: '30rem',
-      display: 'block'
-    }
 
     return (
       <div>
 
       <header className="masthead bg-primary text-white text-center" id='lyftHeader'>
         <div className="container">
-        <img src='../../assets/lyft-logo.png' className='lyftLogo' style={{maxHeight:'50px'}}></img>
+        <img src='../../assets/lyft-logo.png' className='lyftLogo'></img>
         </div>
       </header>
 
-      <Map
-      google={this.props.google}
-      zoom={14}
-      initialCenter={{
-            lat: 40.854885,
-            lng: -88.081807
-          }}
-      center={{
-            lat: this.state.latitude,
-            lng: this.state.longitude
-          }}    
-      onClick={this.onMapClicked}
-      style={mapStyles}
-      >
+      <hr></hr>
 
-        <Marker onClick={this.onMarkerClick} name={'Current location'} />
-
-        <InfoWindow onClose={this.onInfoWindowClose}>
-        </InfoWindow>
-      </Map>
+      <section className="portfolio" id="portfolio">
+        <div className="container">
+          <h2 className="text-center text-uppercase text-secondary mb-0">Time</h2>
+          <hr className="star-dark mb-5"></hr>
+          <p className="lead">Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day.
+          Plan your driving schedule in advance through our easy to use service and add value to your time.
+          </p>
+          <div className="row">
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <hr></hr>
+
+      <div className='dashboardStudentContainer' width="20rem" height="20rem">
+        <canvas id="studentChart" width="15rem" height="15rem"></canvas>
+      </div>
+
+      <div>
+      <button onClick={this.getFlightData}>Get Flight Data</button>
+      </div>
 
       </div>
     )
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: ('AIzaSyBaE-JVaFk4HeWmSOYi7s3tsaCYmZrISs0')
-})(Lyft)
+export default Lyft

@@ -1,6 +1,6 @@
 import React from 'react'
 import FlightDataService from '../../services/FlightDataService/index'
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import Chart from 'chart.js';
 
 class Uber extends React.Component {
 
@@ -9,18 +9,93 @@ class Uber extends React.Component {
 
     this.state = {
       latitude: 40.854885,
-      longitude: -88.081807
+      longitude: -88.081807,
+      flightData: {},
+      topChoices: []
     }
 
-    this.getFlightData = this.getFlightData.bind(this)
     this.flightDataService = new FlightDataService()
   }
 
-  getFlightData() {
-    this.flightDataService.getFlightData('LGA')
-  }
+  componentDidMount() {
 
-  componentDidMount(){
+    let flightData = this.flightDataService.getFlightData((flightData) => {
+      this.setState({ flightData : flightData })
+      console.log('this.state.flightData', this.state.flightData)
+
+      var time_vals_lga = {}
+      var time_vals_roc = {}
+
+      var chart_labels = []
+
+      for (var airportCode in flightData) {
+        var attributeKey = airportCode
+        var attributeValue = flightData[airportCode]
+        for (var moreData in attributeValue) {
+          var attributeK = moreData
+          var attributeV = attributeValue[moreData]
+          console.log('attributeK', attributeK)
+          console.log('attributeV', attributeV)
+          if (typeof(attributeV) == 'object') {
+            console.log('true')
+            for (var evenMoreData in attributeV) {
+              var attrK = evenMoreData
+              var attrV = attributeV[evenMoreData]
+              console.log('attrK', attrK)
+              console.log('attrV', attrV)
+              if (typeof(attrV) == 'object') {
+                console.log('true obj')
+                for (var mostData in attrV) {
+                  var lastAttrK = mostData
+                  var lastAttrV = attrV[mostData]
+                  console.log('lastAttrK', lastAttrK)
+                  console.log('lastAttrV', lastAttrV)
+                  chart_labels
+                }
+              }
+            }
+          }
+        }
+      }
+
+      var ctx = document.getElementById("studentChart");
+
+      var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['1:00 PM', '2:00 PM', '3:00 PM', 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+          datasets: [{
+            label: 'Flights By Time',
+            data: [12, 19, 3, 1, 2, 43],
+            backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                ],
+            borderColor: [
+                  'rgba(255,99,132,1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                ],
+                borderWidth: 1
+              }]
+          },
+          options: {
+            scales: {
+              yAxes: [{
+                ticks: {
+                  beginAtZero:true
+                }
+              }]
+            }
+          }
+        });
+      })
+
     navigator.geolocation.getCurrentPosition(
       position => {
         const { lat, lon } = position.coords;
@@ -32,48 +107,94 @@ class Uber extends React.Component {
         });
         console.log(this.state);
       }
-    );
+    )
   }
+
 
   render() {
 
-    const mapStyles = {
-      width: '100%',
-      height: '30rem',
-      display: 'block'
-    }
+    let topChoices = ['hello']
 
     return (
       <div>
 
       <header className="masthead bg-primary text-white text-center" id="uberHeader">
         <div className="container">
-        <img src='../../assets/uber_2016_logo.png' className='uberLogo' style={{maxHeight:'50px'}}></img>
+        <img src='../../assets/uber_2016_logo.png' className='uberLogo'></img>
         </div>
       </header>
 
-      <Map
-      google={this.props.google}
-      zoom={14}
-      initialCenter={{
-            lat: 40.854885,
-            lng: -88.081807
-          }}
-      center={{
-            lat: this.state.latitude,
-            lng: this.state.longitude
-          }}    
-      onClick={this.onMapClicked}
-      style={mapStyles}
-      >
+      <hr></hr>
 
-        <Marker onClick={this.onMarkerClick} name={'Current location'} />
+      <section className="portfolio" id="portfolio">
+        <div className="container">
+          <h2 className="text-center text-uppercase text-secondary mb-0">Top Choices</h2>
+          <hr className="star-dark mb-5"></hr>
+          {topChoices}
+          <div className="row">
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <InfoWindow onClose={this.onInfoWindowClose}>
-        </InfoWindow>
-      </Map>
+      <hr></hr>
 
-      <button>airport</button>
+      <div className='dashboardStudentContainer'>
+        <canvas id="studentChart"></canvas>
+      </div>
 
       <hr></hr>
 
@@ -82,6 +203,4 @@ class Uber extends React.Component {
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: ('AIzaSyBaE-JVaFk4HeWmSOYi7s3tsaCYmZrISs0')
-})(Uber)
+export default Uber

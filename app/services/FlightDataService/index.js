@@ -2,16 +2,11 @@ var request = require('request')
 
 class FlightDataService {
 
-  register(airportCode) {
-    var postData = {
-      airportCode : airportCode
-    };
+  getFlightData(callback) {
 
-    var url = 'https://localhost:3000/flight-data'
+    var url = 'http://localhost:3000/flight-data'
     var options = {
-      method: 'post',
-      body: postData,
-      json: true,
+      method: 'get',
       url: url
     }
 
@@ -20,8 +15,12 @@ class FlightDataService {
         console.error('error posting json: ', err)
         throw err
       }
+
       var headers = res.headers
       var statusCode = res.statusCode
+
+      let flightMap = JSON.parse(res.body);
+      callback(flightMap)
     })
   }
 }

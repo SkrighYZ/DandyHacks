@@ -317,3 +317,8 @@ body {
 #map {
   width: 50rem;
   height: 50rem; }
+
+#studentChart {
+  width: 50rem !important;
+  height: 25rem !important;
+  margin: auto !important; }
