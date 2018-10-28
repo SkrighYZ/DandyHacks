@@ -71,33 +71,35 @@ class Lyft extends React.Component {
             myMarker.setMap(map);
 
             var service = new google.maps.places.PlacesService(map);
-         service.nearbySearch({
-         location: pyrmont,
-         radius: 10000,
-         type: 'airport'},
-         function(results, status){
-           if (status === google.maps.places.PlacesServiceStatus.OK) {
-             for (var i = 0; i < results.length; i++) {
-               console.log(results);
-               let placeLoc = results[i].geometry.location;
-               let marker = new google.maps.Marker({
-               map: map,
-               position: results[i].geometry.location,
-               title: results[i].name,
-               icon: '../../assets/airport_marker.png'
-               });
+                    service.nearbySearch({
+                    location: pyrmont,
+                    radius: 10000,
+                    keyword: ['airport'],
+                    name: ['airport'],
+                    type: ['airport']},
+                    function(results, status){
+                      if (status === google.maps.places.PlacesServiceStatus.OK) {
+                        for (var i = 0; i < results.length; i++) {
+                          if(results[i].name.includes("Park")) continue;
+                          let placeLoc = results[i].geometry.location;
+                          let marker = new google.maps.Marker({
+                          map: map,
+                          position: results[i].geometry.location,
+                          title: results[i].name,
+                          icon: '../../assets/airport_marker.png'
+                          });
 
-               let infowindow = new google.maps.InfoWindow({
-                 content: marker.title
-                });
+                          let infowindow = new google.maps.InfoWindow({
+                            content: marker.title
+                           });
 
-               marker.addListener('click', function() {
-                 infowindow.open(map, marker);
-               });
-               marker.setMap(map);
-             }
-           }
-         });
+                          marker.addListener('click', function() {
+                            infowindow.open(map, marker);
+                          });
+                          marker.setMap(map);
+                        }
+                      }
+            });
 
 
 
@@ -268,7 +270,7 @@ class Lyft extends React.Component {
                   options: {
                     title: {
                       display: true,
-                      text: key,
+                      text: key.toUpperCase(),
                       fontSize: 30
 
                     },
@@ -303,8 +305,15 @@ class Lyft extends React.Component {
   render() {
 
     let eventTitle = (this.state.mostPopularEvent != undefined) ? this.state.mostPopularEvent.title : "Unavailable"
-    let eventStopTime = (this.state.mostPopularEvent != undefined) ? this.state.mostPopularEvent.stop_time : "0:00"
+    let eventStopTime = (this.state.mostPopularEvent != undefined) ? this.state.mostPopularEvent.stop_time : "Unavailable"
 
+/*
+    if((eventTitle == "Unavailable") || (eventStopTime = "Unavailable")){
+      var x = document.getElementById("eventParagraph");
+      x.style.display = "none";
+    }
+
+*/
 
     return (
       <div>
@@ -320,7 +329,7 @@ class Lyft extends React.Component {
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Flights</h2>
           <hr className="star-dark mb-5"></hr>
-          <p className="lead" id='eventParagraph'>There are <span id='boldInfo'>{max}</span> flights arriving on <span id='boldInfo'>{timeMax} {day}</span> at <span id='boldInfo'>{airline}</span></p>
+          <p className="lead" id='eventParagraph'>There are <span id='boldInfo'>{max}</span> flights arriving on <span id='boldInfo'>{timeMax} {day}</span> at <span id='boldInfo'>{airline.toUpperCase()}</span></p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
