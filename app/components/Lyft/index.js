@@ -11,7 +11,9 @@ class Lyft extends React.Component {
 
     this.state = {
       latitude: 40.854885,
-      longitude: -88.081807
+      longitude: -88.081807,
+      maxFlights: 0,
+      numDrivers: 0
     }
 
     this.getFlightData = this.getFlightData.bind(this)
@@ -40,60 +42,111 @@ class Lyft extends React.Component {
           center: pyrmont,
           zoom: 14});
 
-          var airportLatlng = new google.maps.LatLng(43.1225, -77.6666);
-
-          var airportMarker = new google.maps.Marker({
-            position: airportLatlng,
-            title:"Greater Rochester International Airport",
-            icon: '../../assets/airport_marker.png'
+          var myLatlng = new google.maps.LatLng(this.state.latitude, this.state.longitude);
+          var myMarker = new google.maps.Marker({
+            position: myLatlng,
+            title:"Current Location",
             });
 
-            var infowindow2 = new google.maps.InfoWindow({
-              content: airportMarker.title
+          var infowindow1 = new google.maps.InfoWindow({
+              content: myMarker.title
             });
 
 
-          airportMarker.addListener('click', function() {
-            infowindow2.open(map, airportMarker);
+          myMarker.addListener('click', function() {
+            infowindow1.open(map, myMarker);
           });
 
-            airportMarker.setMap(map);
+            myMarker.setMap(map);
+
+            var service = new google.maps.places.PlacesService(map);
+         service.nearbySearch({
+         location: pyrmont,
+         radius: 100000,
+         keyword: ['airport'],
+         name: ['airport'],
+         type: ['airport']},
+         function(results, status){
+           if (status === google.maps.places.PlacesServiceStatus.OK) {
+             for (var i = 0; i < results.length; i++) {
+               let placeLoc = results[i].geometry.location;
+               let marker = new google.maps.Marker({
+               map: map,
+               position: results[i].geometry.location,
+               title: results[i].name,
+               icon: '../../assets/airport_marker.png'
+               });
+
+               let infowindow = new google.maps.InfoWindow({
+                 content: marker.title
+                });
+
+               marker.addListener('click', function() {
+                 infowindow.open(map, marker);
+               });
+               marker.setMap(map);
+             }
+           }
+         });
+
+
+
+            this.eventDataService.getEventData(this.state.latitude, this.state.longitude, (events) => {
+              let actual_events = events.search.events
+
+              let final_event_obj = actual_events[0].event
+
+              this.setState({ mostPopularEvent : final_event_obj[0]})
+
+              for (var current_event in final_event_obj) {
+                let some_obj = final_event_obj[current_event]
+                for (var more_current_event in some_obj) {
+                  var latitude, longitude, title, stopTime;
+                  if (more_current_event == "longitude") {
+                    longitude = some_obj[more_current_event]
+                    console.log('longitude', longitude)
+                  }
+                  if (more_current_event == "latitude") {
+                    latitude = some_obj[more_current_event]
+                    console.log('latitude', latitude)
+                  }
+                  if (more_current_event == "title") {
+                    title = some_obj[more_current_event]
+                    console.log('title', title)
+                  }
+                  if (more_current_event == "stop_time") {
+                    stopTime = some_obj[more_current_event]
+                    console.log('stopTime', stopTime)
+                  }
+
+                  var myLatlng = new google.maps.LatLng(latitude, longitude);
+
+
+                  var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    icon: '../../assets/event_marker.png'
+                    });
+
+                    marker.setMap(map);
+                }
+              }
+            })
 
 
         this.LyftDataService.getNearbyDrivers(this.state.latitude, this.state.longitude, (driversData) => {
-          /*
-          console.log('drivers data', driversData)
-          console.log('typeof(driversData)', typeof(driversData))
-          console.log('driversData.nearby_drivers', driversData.nearby_drivers)
-          console.log('typeof(driversData.nearby_drivers)', typeof(driversData.nearby_drivers))
-          console.log('driversData.nearby_drivers[0]', driversData.nearby_drivers[0])
-          */
 
           let lyftDrivers = driversData.nearby_drivers[0]
           let lyftPlusDrivers = driversData.nearby_drivers[1]
 
-
-          /*
-          console.log('lyftDrivers', lyftDrivers)
-          console.log('typeof(lyftDrivers)', typeof(lyftDrivers))
-
-          console.log('lyftDrivers.drivers', lyftDrivers.drivers)
-          console.log('typeof(lyftDrivers.drivers)', typeof(lyftDrivers.drivers))
-          */
+          var numDrivers = 0;
 
           for (var driver in lyftDrivers.drivers) {
             let current_driver = lyftDrivers.drivers[driver]
-            /*
-            console.log('current_driver', current_driver)
-            console.log('typeof(current_driver)', typeof(current_driver))
-            console.log('current_driver[0]', current_driver[0])
-            console.log('current_driver.locations[0]', current_driver.locations[0])
-            */
+
             let latitude = current_driver.locations[0].lat
             let longitude = current_driver.locations[0].lng
 
-            console.log('latitude', latitude)
-            console.log('longitude', longitude)
+            numDrivers += 1;
 
             var myLatlng = new google.maps.LatLng(latitude, longitude);
 
@@ -105,55 +158,95 @@ class Lyft extends React.Component {
 
               marker.setMap(map);
           }
+
+          this.setState({ numDrivers : numDrivers})
         })
       }
     );
 
-    var ctx = document.getElementById("studentChart");
+    let flightData = this.flightDataService.getFlightData((flightData) => {
+          this.setState({ flightData : flightData })
+          console.log('this.state.flightData', this.state.flightData)
 
-    var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
-        datasets: [{
-            label: 'Frequently discussed topics',
-            data: [12, 19, 3, 1, 2, 43],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
+          var datasets = []
+
+          var time_data = [];
+          for (var airportCode in flightData) {
+
+
+            if (flightData[airportCode].hasOwnProperty('roc')) {
+              var attributeKey = airportCode
+              var attributeValue = flightData[airportCode]
+
+              for (var moreData in attributeValue) {
+                var attributeK = moreData
+                var attributeV = attributeValue[moreData]
+
+                for (var date in attributeV) {
+
+                  var data_entry = {
+                    data: [],
+                    label: date
+                  }
+
+                  let some_date = attributeV[date]
+
+                  for (var time in some_date) {
+                    if ((typeof(time) === 'string') && (time_data.includes(time) != true)) {
+                      time_data.push(time)
+
+                      let some_time = some_date[time]
+                      data_entry.data.push(some_time)
+                    }
+
+                  }
+
+                    datasets.push(data_entry)
+
+              }
+            }
+          }
         }
-    }
-  });
 
+        console.log('datasets', datasets)
 
-  this.eventDataService.getEventData((events) => {
-    console.log("events", events)
-  })
+        new Chart(document.getElementById("studentChart"), {
+          type: 'line',
+          data: {
+            labels: time_data,
+            datasets: [{
+              data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 3, 5, 2, 6, 3, 3, 4, 7, 6, 1, 5, 3, 2, 10],
+              label: "Oct 26",
+              borderColor: "#3e95cd",
+              fill: false
+            }, {
+              data: [0, 3, 0, 0, 0, 0, 0, 1, 0, 0, 5, 2, 5, 3, 4, 2, 3, 5, 6, 5, 1, 3, 1, 2],
+              label: "Oct 27",
+              borderColor: "#8e5ea2",
+              fill: false
+            }, {
+              data: [0, 1, 0, 0, 0, 0, 0, 0, 1, 3, 3, 7, 2, 5, 3, 2, 4, 7, 6, 1, 3, 3, 0, 9],
+              label: "Oct 28",
+              borderColor: "#3cba9f",
+              fill: false
+            }, {
+              data: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              label: "Oct 29",
+              borderColor: "#e8c3b9",
+              fill: false
+            }
+          ]
+        }
+      });
+    })
 
 }
 
   render() {
+
+    let eventTitle = (this.state.mostPopularEvent != undefined) ? this.state.mostPopularEvent.title : "Unavailable"
+    let eventStopTime = (this.state.mostPopularEvent != undefined) ? this.state.mostPopularEvent.stop_time : "0:00"
+
 
     return (
       <div>
@@ -168,9 +261,8 @@ class Lyft extends React.Component {
       <section className="portfolio">
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Flights</h2>
-          <p className="lead">Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day.
-          Plan your driving schedule in advance through our easy to use service and add value to your time.
-          </p>
+          <hr className="star-dark mb-5"></hr>
+          <p className="lead" id='eventParagraph'>There are <span id='boldInfo'>9</span> flights arriving at <span id='boldInfo'>11:00 PM</span> at <span id='boldInfo'>Greater Rochester International Airport</span></p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
@@ -230,12 +322,11 @@ class Lyft extends React.Component {
         </div>
       </section>
 
-      <section className="portfolio">
+      <section className="portfolio" id='anotherGreen'>
         <div className="container">
-          <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Events</h2>
-          <p className="lead">Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day.
-          Plan your driving schedule in advance through our easy to use service and add value to your time.
-          </p>
+          <h2 className="text-center text-uppercase text-secondary mb-0" id='eventMiddleTitle'>Events</h2>
+          <hr className="star-light mb-5"></hr>
+          <p className="lead" id='eventParagraph'>The most popular event within a 25 mile radius from you is {eventTitle}, which ends at approximately <span id='boldInfo'>{eventStopTime}</span></p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
@@ -298,9 +389,8 @@ class Lyft extends React.Component {
       <section className="portfolio">
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Competition</h2>
-          <p className="lead">Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day.
-          Plan your driving schedule in advance through our easy to use service and add value to your time.
-          </p>
+          <hr className="star-dark mb-5"></hr>
+          <p className="lead" id='eventParagraph'>There are currently <span id='boldInfo'>{this.state.numDrivers}</span> other Lyft drivers working in your area.</p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
@@ -362,12 +452,10 @@ class Lyft extends React.Component {
 
       <div id='map'></div>
 
-      <div className='dashboardStudentContainer' width="20rem" height="20rem">
-        <canvas id="studentChart" width="15rem" height="15rem"></canvas>
-      </div>
 
-      <div>
-      <button onClick={this.getFlightData}>Get Flight Data</button>
+      <div className='dashboardStudentContainer' id='dashboardStudentContainer'>
+      <h3 id='flightChartTitle'>Greater Rochester International Airport Flight Times</h3>
+        <canvas id="studentChart"></canvas>
       </div>
 
       </div>
