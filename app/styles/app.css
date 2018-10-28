@@ -348,6 +348,9 @@ a {
   background: #28BC9C !important;
   color: white !important; }
 
+#boldInfo {
+  font-weight: bolder !important; }
+
 body {
   background: white !important;
   padding: 0;

@@ -59,24 +59,37 @@ class Lyft extends React.Component {
 
             myMarker.setMap(map);
 
-          var airportLatlng = new google.maps.LatLng(43.1225, -77.6666);
+            var service = new google.maps.places.PlacesService(map);
+         service.nearbySearch({
+         location: pyrmont,
+         radius: 100000,
+         keyword: ['airport'],
+         name: ['airport'],
+         type: ['airport']},
+         function(results, status){
+           if (status === google.maps.places.PlacesServiceStatus.OK) {
+             for (var i = 0; i < results.length; i++) {
+               let placeLoc = results[i].geometry.location;
+               let marker = new google.maps.Marker({
+               map: map,
+               position: results[i].geometry.location,
+               title: results[i].name,
+               icon: '../../assets/airport_marker.png'
+               });
 
-          var airportMarker = new google.maps.Marker({
-            position: airportLatlng,
-            title:"Greater Rochester International Airport",
-            icon: '../../assets/airport_marker.png'
-            });
+               let infowindow = new google.maps.InfoWindow({
+                 content: marker.title
+                });
 
-            var infowindow2 = new google.maps.InfoWindow({
-              content: airportMarker.title
-            });
+               marker.addListener('click', function() {
+                 infowindow.open(map, marker);
+               });
+               marker.setMap(map);
+             }
+           }
+         });
 
 
-          airportMarker.addListener('click', function() {
-            infowindow2.open(map, airportMarker);
-          });
-
-            airportMarker.setMap(map);
 
             this.eventDataService.getEventData(this.state.latitude, this.state.longitude, (events) => {
               let actual_events = events.search.events
@@ -234,6 +247,7 @@ class Lyft extends React.Component {
     let eventTitle = (this.state.mostPopularEvent != undefined) ? this.state.mostPopularEvent.title : "Unavailable"
     let eventStopTime = (this.state.mostPopularEvent != undefined) ? this.state.mostPopularEvent.stop_time : "0:00"
 
+
     return (
       <div>
 
@@ -248,7 +262,7 @@ class Lyft extends React.Component {
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Flights</h2>
           <hr className="star-dark mb-5"></hr>
-          <p className="lead" id='eventParagraph'>There are 9 flights arriving at 11:00 PM at Greater Rochester International Airport</p>
+          <p className="lead" id='eventParagraph'>There are <span id='boldInfo'>9</span> flights arriving at <span id='boldInfo'>11:00 PM</span> at <span id='boldInfo'>Greater Rochester International Airport</span></p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
@@ -312,7 +326,7 @@ class Lyft extends React.Component {
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0" id='eventMiddleTitle'>Events</h2>
           <hr className="star-light mb-5"></hr>
-          <p className="lead" id='eventParagraph'>The most popular event within a 25 mile radius from you is <b>{eventTitle}</b> located at n/a and ends at approximately <b>{eventStopTime}</b></p>
+          <p className="lead" id='eventParagraph'>The most popular event within a 25 mile radius from you is {eventTitle}, which ends at approximately <span id='boldInfo'>{eventStopTime}</span></p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
@@ -376,7 +390,7 @@ class Lyft extends React.Component {
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Competition</h2>
           <hr className="star-dark mb-5"></hr>
-          <p className="lead" id='eventParagraph'>There are currently <b>{this.state.numDrivers}</b> other Lyft drivers working in your area.</p>
+          <p className="lead" id='eventParagraph'>There are currently <span id='boldInfo'>{this.state.numDrivers}</span> other Lyft drivers working in your area.</p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
