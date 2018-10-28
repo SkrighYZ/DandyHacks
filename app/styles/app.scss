@@ -19,8 +19,9 @@ body {
 }
 
 #map {
-  width: 50rem;
-  height: 50rem;
+  width: 100% !important;
+  height: 30rem !important;
+  margin: auto;
 }
 
 #studentChart {

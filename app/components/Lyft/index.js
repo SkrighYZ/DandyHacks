@@ -69,9 +69,22 @@ class Lyft extends React.Component {
             }]
         }
     }
-});
+  });
 
-  }
+  var pyrmont = {lat: this.state.latitude, lng: this.state.longitude};
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: pyrmont,
+    zoom: 12});
+
+  infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
+  service.nearbySearch({
+      location: pyrmont,
+      radius: 10000,
+      type: ['airport']
+  }, callback);
+
+}
 
   render() {
 
@@ -152,7 +165,7 @@ class Lyft extends React.Component {
         </div>
       </section>
 
-      <hr></hr>
+      <div id='map'></div>
 
       <div className='dashboardStudentContainer' width="20rem" height="20rem">
         <canvas id="studentChart" width="15rem" height="15rem"></canvas>
