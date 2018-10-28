@@ -255,22 +255,33 @@ class Lyft extends React.Component {
                              "12PM","1PM","2PM","3PM","4PM","5PM","6PM","7PM","8PM","9PM","10PM","11PM"],
                       datasets:curr
                   },
+                  responsive: true,
                   options: {
                     title: {
                       display: true,
-                      text: key
+                      text: key,
+                      fontSize: 30
+
                     },
                     tooltips: {
                       mode: 'index',
                       intersect: false
                     },
-                    responsive: true,
+
                     scales: {
                       xAxes: [{
                         stacked: true,
+                        scaleLabel: {
+                          display: true,
+                          labelString: 'Time'
+                        }
                       }],
                       yAxes: [{
-                        stacked: true
+                        stacked: true,
+                        scaleLabel: {
+                          display: true,
+                          labelString: 'Number of Flights'
+                        }
                       }]
                     }
                   }
