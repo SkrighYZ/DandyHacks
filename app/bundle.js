@@ -81037,13 +81037,22 @@ var Uber = function (_React$Component) {
           center: pyrmont,
           zoom: 14 });
 
-        var infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
-          location: pyrmont,
-          radius: 10000,
-          type: ['airport']
-        }, callback);
+        var myLatlng = new google.maps.LatLng(43.1225, -77.6666);
+
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          title: "Greater Rochester International Airport"
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+          content: marker.title
+        });
+
+        marker.addListener('click', function () {
+          infowindow.open(map, marker);
+        });
+
+        marker.setMap(map);
       });
     }
   }, {
@@ -81071,7 +81080,247 @@ var Uber = function (_React$Component) {
             _react2.default.createElement(
               'h2',
               { className: 'text-center text-uppercase text-secondary mb-0' },
-              'Top Choices'
+              'Flights'
+            ),
+            _react2.default.createElement('hr', { className: 'star-dark mb-5' }),
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-1' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-2' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-3' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-4' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-5' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-6' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { className: 'portfolio', id: 'portfolio' },
+          _react2.default.createElement(
+            'div',
+            { className: 'container' },
+            _react2.default.createElement(
+              'h2',
+              { className: 'text-center text-uppercase text-secondary mb-0' },
+              'Events'
+            ),
+            _react2.default.createElement('hr', { className: 'star-dark mb-5' }),
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-1' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-2' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-3' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-4' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-5' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-6' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { className: 'portfolio', id: 'portfolio' },
+          _react2.default.createElement(
+            'div',
+            { className: 'container' },
+            _react2.default.createElement(
+              'h2',
+              { className: 'text-center text-uppercase text-secondary mb-0' },
+              'Competition'
             ),
             _react2.default.createElement('hr', { className: 'star-dark mb-5' }),
             _react2.default.createElement(
@@ -123692,7 +123941,255 @@ var Lyft = function (_React$Component) {
             _react2.default.createElement(
               'h2',
               { className: 'text-center text-uppercase text-secondary mb-0', id: 'timeTitle' },
-              'Time'
+              'Flights'
+            ),
+            _react2.default.createElement(
+              'p',
+              { className: 'lead' },
+              'Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day. Plan your driving schedule in advance through our easy to use service and add value to your time.'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-1' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-2' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-3' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-4' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-5' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-6' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { className: 'portfolio' },
+          _react2.default.createElement(
+            'div',
+            { className: 'container' },
+            _react2.default.createElement(
+              'h2',
+              { className: 'text-center text-uppercase text-secondary mb-0', id: 'timeTitle' },
+              'Events'
+            ),
+            _react2.default.createElement(
+              'p',
+              { className: 'lead' },
+              'Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day. Plan your driving schedule in advance through our easy to use service and add value to your time.'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-1' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-2' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-3' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-4' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-5' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-lg-4' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-item d-block mx-auto', href: '#portfolio-modal-6' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-item-caption d-flex position-absolute h-100 w-100' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-item-caption-content my-auto w-100 text-center text-white' },
+                      _react2.default.createElement('i', { className: 'fas fa-search-plus fa-3x' })
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'section',
+          { className: 'portfolio' },
+          _react2.default.createElement(
+            'div',
+            { className: 'container' },
+            _react2.default.createElement(
+              'h2',
+              { className: 'text-center text-uppercase text-secondary mb-0', id: 'timeTitle' },
+              'Competition'
             ),
             _react2.default.createElement(
               'p',
@@ -123862,27 +124359,18 @@ var EventDataService = function () {
 
       var parseString = __webpack_require__(796).parseString;
 
+      var proxyurl = "https://cors-anywhere.herokuapp.com/";
       var url = 'https://api.eventful.com/rest/events/search?app_key=PTc4mmXnq37xG6Cz&where=43,-77&within=25&date=2018102600-2018113000&sort_by=popularity&page_size=100';
-      var options = {
-        method: 'get',
-        url: url
-      };
-
-      request(options, function (err, res, body) {
-
-        if (err) {
-          console.error('error posting json: ', err);
-          throw err;
-        }
-
-        console.log('res', res);
-        console.log('body', body);
-
-        var headers = res.headers;
-        var statusCode = res.statusCode;
-
-        var flightMap = JSON.parse(res.body);
-        callback(flightMap);
+      fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
+      .then(function (response) {
+        return response.text();
+      }).then(function (contents) {
+        var xml_response = contents;
+        parseString(xml_response, function (err, result) {
+          console.log(result);
+        });
+      }).catch(function () {
+        return console.log("Can’t access " + url + " response. Blocked by browser?");
       });
     }
   }]);

@@ -111,18 +111,28 @@ class Uber extends React.Component {
           center: pyrmont,
           zoom: 14});
 
-        var infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
-            location: pyrmont,
-            radius: 10000,
-            type: ['airport']
-        }, callback);
+        var myLatlng = new google.maps.LatLng(43.1225, -77.6666);
+
+
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          title:"Greater Rochester International Airport"
+          });
+
+          var infowindow = new google.maps.InfoWindow({
+            content: marker.title
+          });
+
+
+        marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+
+          marker.setMap(map);
+
       }
     )
   }
-
-
 
   render() {
 
@@ -138,7 +148,133 @@ class Uber extends React.Component {
 
       <section className="portfolio" id="portfolio">
         <div className="container">
-          <h2 className="text-center text-uppercase text-secondary mb-0">Top Choices</h2>
+          <h2 className="text-center text-uppercase text-secondary mb-0">Flights</h2>
+          <hr className="star-dark mb-5"></hr>
+          <div className="row">
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio" id="portfolio">
+        <div className="container">
+          <h2 className="text-center text-uppercase text-secondary mb-0">Events</h2>
+          <hr className="star-dark mb-5"></hr>
+          <div className="row">
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-2">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-3">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-4">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-5">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-6 col-lg-4">
+              <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-6">
+                <div className="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                  <div className="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                    <i className="fas fa-search-plus fa-3x"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio" id="portfolio">
+        <div className="container">
+          <h2 className="text-center text-uppercase text-secondary mb-0">Competition</h2>
           <hr className="star-dark mb-5"></hr>
           <div className="row">
             <div className="col-md-6 col-lg-4">

@@ -8,28 +8,17 @@ class EventDataService {
 
     var parseString = require('xml2js').parseString;
 
-    var url = 'https://api.eventful.com/rest/events/search?app_key=PTc4mmXnq37xG6Cz&where=43,-77&within=25&date=2018102600-2018113000&sort_by=popularity&page_size=100'
-    var options = {
-      method: 'get',
-      url: url
-    }
-
-    request(options, function (err, res, body) {
-
-      if (err) {
-        console.error('error posting json: ', err)
-        throw err
-      }
-
-      console.log('res', res)
-      console.log('body', body)
-
-      var headers = res.headers
-      var statusCode = res.statusCode
-
-      let flightMap = JSON.parse(res.body);
-      callback(flightMap)
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    const url = 'https://api.eventful.com/rest/events/search?app_key=PTc4mmXnq37xG6Cz&where=43,-77&within=25&date=2018102600-2018113000&sort_by=popularity&page_size=100'
+    fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
+    .then(response => response.text())
+    .then(contents => {
+      let xml_response = contents
+      parseString(xml_response, (err, result) => {
+        console.log(result);
+      });
     })
+    .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
   }
 }
 
