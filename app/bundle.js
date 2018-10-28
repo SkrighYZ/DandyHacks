@@ -80960,11 +80960,7 @@ var Uber = function (_React$Component) {
         _this2.setState({ flightData: flightData });
         console.log('this.state.flightData', _this2.state.flightData);
 
-        var time_vals_lga = {};
-        var time_vals_roc = {};
-
-        var chart_labels = [];
-
+        var dates_data = [];
         for (var airportCode in flightData) {
           var attributeKey = airportCode;
           var attributeValue = flightData[airportCode];
@@ -80975,35 +80971,27 @@ var Uber = function (_React$Component) {
             console.log('attributeV', attributeV);
             if ((typeof attributeV === 'undefined' ? 'undefined' : _typeof(attributeV)) == 'object') {
               console.log('true');
-              for (var evenMoreData in attributeV) {
-                var attrK = evenMoreData;
-                var attrV = attributeV[evenMoreData];
-                console.log('attrK', attrK);
-                console.log('attrV', attrV);
-                if ((typeof attrV === 'undefined' ? 'undefined' : _typeof(attrV)) == 'object') {
-                  console.log('true obj');
-                  for (var mostData in attrV) {
-                    var lastAttrK = mostData;
-                    var lastAttrV = attrV[mostData];
-                    console.log('lastAttrK', lastAttrK);
-                    console.log('lastAttrV', lastAttrV);
-                    chart_labels;
-                  }
+              var dates = [];
+              for (var i in attributeV) {
+                var time = [];
+                for (var z in attributeV[i]) {
+                  time.push(attributeV[i][z]);
                 }
+                dates[i] = time;
               }
+              dates_data[attributeK] = dates;
             }
           }
         }
-
+        console.log('by Dates', dates_data);
         var ctx = document.getElementById("studentChart");
-
         var myChart = new _chart2.default(ctx, {
           type: 'bar',
           data: {
-            labels: ['1:00 PM', '2:00 PM', '3:00 PM', 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
+            labels: ["12AM", "1AM", "2AM", "3AM", "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM"],
             datasets: [{
-              label: 'Flights By Time',
-              data: [12, 19, 3, 1, 2, 43],
+              label: 'Flights',
+              data: dates_data['lga']['Oct 27'],
               backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)'],
               borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
               borderWidth: 1
