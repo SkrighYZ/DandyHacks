@@ -36,15 +36,20 @@ router.get('/flight-data', function (req, res) {
   });
 });
 
-router.get('/lyft-data', function (req, res) {
+router.post('/lyft-data', function (req, res) {
+
+  var latitude = req.body.latitude;
+  var longitude = req.body.longitude;
+
   let defaultClient  = lyft.ApiClient.instance;
   let clientAuth = defaultClient.authentications['Client Authentication'];
   clientAuth.accessToken = '9xmWqUnPr1l5L4kDsuKEl9JGXGNGKEI19g8ECMmHyAYwC0vE2iZGuemwNhcIzIVcecy3Ud+v5rmWjicNvWeiVpZuJaH2MZOmvR0jQFaARxEV/J002t4B8Ko=';
 
   let apiInstance = new lyft.PublicApi();
 
-  apiInstance.getDrivers(37.7763, -122.3918).then((data) => {
+  apiInstance.getDrivers(latitude, longitude).then((data) => {
     console.log('API called successfully. Returned data: ' + data);
+    res.send(data)
   }, (error) => {
     console.error(error);
   });

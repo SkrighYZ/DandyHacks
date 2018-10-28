@@ -2,12 +2,19 @@ var request = require('request')
 
 class LyftDataService {
 
-  getNearbyDrivers(callback) {
+  getNearbyDrivers(latitude, longitude, callback) {
 
-    var url = 'https://api.lyft.com/oauth/token/username=NjnHQD7IWWxJ&password=Gbtl3ZeBuLzOODGTGqTKnpSwMNQOyl9j'
+    var postData = {
+      latitude : latitude,
+      longitude : longitude
+    };
+
+    var url = 'http://localhost:3000/lyft-data'
     var options = {
-      method: 'get',
-      url: url
+      method: 'post',
+      url: url,
+      body: postData,
+      json: true
     }
 
     request(options, function (err, res, body) {
@@ -19,8 +26,10 @@ class LyftDataService {
       var headers = res.headers
       var statusCode = res.statusCode
 
-      let flightMap = JSON.parse(res.body);
-      callback(flightMap)
+      let driverMap = res.body;
+
+      console.log('driverMap', driverMap)
+      callback(driverMap)
     })
   }
 }

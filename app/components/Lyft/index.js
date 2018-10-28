@@ -1,6 +1,7 @@
 import React from 'react'
 import EventDataService from '../../services/EventDataService/index'
 import FlightDataService from '../../services/FlightDataService/index'
+import LyftDataService from '../../services/LyftDataService/index'
 import Chart from 'chart.js';
 
 class Lyft extends React.Component {
@@ -16,6 +17,7 @@ class Lyft extends React.Component {
     this.getFlightData = this.getFlightData.bind(this)
     this.flightDataService = new FlightDataService()
     this.eventDataService = new EventDataService()
+    this.LyftDataService = new LyftDataService()
   }
 
   getFlightData() {
@@ -38,13 +40,49 @@ class Lyft extends React.Component {
           center: pyrmont,
           zoom: 14});
 
-        var infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
-            location: pyrmont,
-            radius: 10000,
-            type: ['airport']
-        }, callback);
+        this.LyftDataService.getNearbyDrivers(this.state.latitude, this.state.longitude, (driversData) => {
+          /*
+          console.log('drivers data', driversData)
+          console.log('typeof(driversData)', typeof(driversData))
+          console.log('driversData.nearby_drivers', driversData.nearby_drivers)
+          console.log('typeof(driversData.nearby_drivers)', typeof(driversData.nearby_drivers))
+          console.log('driversData.nearby_drivers[0]', driversData.nearby_drivers[0])
+          */
+
+          let lyftDrivers = driversData.nearby_drivers[0]
+          let lyftPlusDrivers = driversData.nearby_drivers[1]
+
+
+          console.log('lyftDrivers', lyftDrivers)
+          console.log('typeof(lyftDrivers)', typeof(lyftDrivers))
+
+          console.log('lyftDrivers.drivers', lyftDrivers.drivers)
+          console.log('typeof(lyftDrivers.drivers)', typeof(lyftDrivers.drivers))
+
+          for (var driver in lyftDrivers.drivers) {
+            let current_driver = lyftDrivers.drivers[driver]
+            /*
+            console.log('current_driver', current_driver)
+            console.log('typeof(current_driver)', typeof(current_driver))
+            console.log('current_driver[0]', current_driver[0])
+            console.log('current_driver.locations[0]', current_driver.locations[0])
+            */
+            let latitude = current_driver.locations[0].lat
+            let longitude = current_driver.locations[0].lng
+
+            console.log('latitude', latitude)
+            console.log('longitude', longitude)
+
+            var myLatlng = new google.maps.LatLng(latitude, longitude);
+
+
+            var marker = new google.maps.Marker({
+              position: myLatlng
+              });
+
+              marker.setMap(map);
+          }
+        })
       }
     );
 
