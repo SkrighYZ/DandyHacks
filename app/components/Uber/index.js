@@ -108,7 +108,21 @@ class Uber extends React.Component {
         console.log(this.state);
       }
     )
+
+    var pyrmont = {lat: this.state.latitude, lng: this.state.longitude};
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: pyrmont,
+      zoom: 12});
+
+    infowindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+    service.nearbySearch({
+        location: pyrmont,
+        radius: 10000,
+        type: ['airport']
+    }, callback);
   }
+
 
 
   render() {
@@ -190,13 +204,11 @@ class Uber extends React.Component {
         </div>
       </section>
 
-      <hr></hr>
+      <div id='map'></div>
 
       <div className='dashboardStudentContainer'>
         <canvas id="studentChart"></canvas>
       </div>
-
-      <hr></hr>
 
       </div>
     )

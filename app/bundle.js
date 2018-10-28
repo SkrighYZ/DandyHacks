@@ -78928,6 +78928,19 @@ var Uber = function (_React$Component) {
         });
         console.log(_this2.state);
       });
+
+      var pyrmont = { lat: this.state.latitude, lng: this.state.longitude };
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: pyrmont,
+        zoom: 12 });
+
+      infowindow = new google.maps.InfoWindow();
+      var service = new google.maps.places.PlacesService(map);
+      service.nearbySearch({
+        location: pyrmont,
+        radius: 10000,
+        type: ['airport']
+      }, callback);
     }
   }, {
     key: 'render',
@@ -79069,13 +79082,12 @@ var Uber = function (_React$Component) {
             )
           )
         ),
-        _react2.default.createElement('hr', null),
+        _react2.default.createElement('div', { id: 'map' }),
         _react2.default.createElement(
           'div',
           { className: 'dashboardStudentContainer' },
           _react2.default.createElement('canvas', { id: 'studentChart' })
-        ),
-        _react2.default.createElement('hr', null)
+        )
       );
     }
   }]);
