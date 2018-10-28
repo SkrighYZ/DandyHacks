@@ -14,9 +14,10 @@ class Home extends React.Component {
 
       <header className="masthead bg-primary text-white text-center">
         <div className="container">
-          <h1 className="text-uppercase mb-0">Plan For Success</h1>
+          <h1 className="text-uppercase mb-0">Plan</h1>
           <hr className="star-light"></hr>
-          <h2 className="font-weight-light mb-0">Drive Smart is a utility application used to give users insight into optimal times for driving uber/lyft</h2>
+          <h2 className="font-weight-light mb-0">Whip is a utility application to give you valuable insight into
+           when there could be a hightened demand for transportation services</h2>
         </div>
       </header>
 
@@ -24,8 +25,8 @@ class Home extends React.Component {
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0">Time</h2>
           <hr className="star-dark mb-5"></hr>
-          <p className="lead">Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day.
-          Plan your driving schedule in advance through our easy to use service and add value to your time.
+          <p className="lead">Whip aggregates data from across the web to predict the optimal times for you to work, so you can spend more time
+          doing what you love. Plan your driving schedule in advance through our easy to use service and add value to your time.
           </p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
@@ -92,11 +93,11 @@ class Home extends React.Component {
           <hr className="star-light mb-5"></hr>
           <div className="row">
             <div className="col-lg-4 ml-auto">
-              <p className="lead">In addition to providing users with the best times to work, we also aggregate data to help you determine where there might be the most opportunity.</p>
+              <p className="lead">Utilizing your geo-location we scan your proximity and provide you with a selection of options. Allowing you to choose the ones
+              that best suit your life.</p>
             </div>
             <div className="col-lg-4 mr-auto">
-              <p className="lead">Whiplash uses a vast variety of data including flight times, events, and many other categories that would involve large populations of people.
-               We perform statistical analysis on this data to help users peak in work performance as well as revenue</p>
+              <p className="lead">Whip uses a comprehensive set of data and analysis to empower drivers with our informatics. Don't work more; work smarter.</p>
             </div>
           </div>
         </div>
