@@ -111,24 +111,42 @@ class Uber extends React.Component {
           center: pyrmont,
           zoom: 14});
 
-        var myLatlng = new google.maps.LatLng(43.1225, -77.6666);
-
-
-        var marker = new google.maps.Marker({
+        var myLatlng = new google.maps.LatLng(this.state.latitude, this.state.longitude);
+        var myMarker = new google.maps.Marker({
           position: myLatlng,
-          title:"Greater Rochester International Airport"
+          title:"Current Location",
           });
 
-          var infowindow = new google.maps.InfoWindow({
-            content: marker.title
+        var infowindow1 = new google.maps.InfoWindow({
+            content: myMarker.title
           });
 
 
-        marker.addListener('click', function() {
-          infowindow.open(map, marker);
+        myMarker.addListener('click', function() {
+          infowindow1.open(map, myMarker);
         });
 
-          marker.setMap(map);
+          myMarker.setMap(map);
+
+
+        var airportLatlng = new google.maps.LatLng(43.1225, -77.6666);
+
+        var airportMarker = new google.maps.Marker({
+          position: airportLatlng,
+          title:"Greater Rochester International Airport",
+          icon: '../../assets/airport_marker.png'
+          });
+
+          var infowindow2 = new google.maps.InfoWindow({
+            content: airportMarker.title
+          });
+
+
+        airportMarker.addListener('click', function() {
+          infowindow2.open(map, airportMarker);
+        });
+
+          airportMarker.setMap(map);
 
       }
     )
