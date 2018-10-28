@@ -65470,7 +65470,7 @@ exports = module.exports = __webpack_require__(413)(false);
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Lato'; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-weight: 700;\n  font-family: 'Montserrat'; }\n\nhr.star-light,\nhr.star-dark {\n  max-width: 15rem;\n  padding: 0;\n  text-align: center;\n  border: none;\n  border-top: solid 0.25rem;\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem;\n  margin-left: auto;\n  margin-right: auto; }\n\nhr.star-light:after,\nhr.star-dark:after {\n  position: relative;\n  top: -.8em;\n  display: inline-block;\n  padding: 0 0.25em;\n  content: '\\F005';\n  font-family: \"Font Awesome 5 Free\";\n  font-weight: 900;\n  font-size: 2em; }\n\nhr.star-light {\n  border-color: #fff; }\n\nhr.star-light:after {\n  color: #fff;\n  background-color: #18BC9C; }\n\nhr.star-dark {\n  border-color: #2C3E50; }\n\nhr.star-dark:after {\n  color: #2C3E50;\n  background-color: white; }\n\nsection {\n  padding: 6rem 0; }\n  section h2 {\n    font-size: 2.25rem;\n    line-height: 2rem; }\n  @media (min-width: 992px) {\n    section h2 {\n      font-size: 3rem;\n      line-height: 2.5rem; } }\n\n.btn-xl {\n  padding: 1rem 1.75rem;\n  font-size: 1.25rem; }\n\n.btn-social {\n  width: 3.25rem;\n  height: 3.25rem;\n  font-size: 1.25rem;\n  line-height: 2rem; }\n\n.scroll-to-top {\n  z-index: 1042;\n  right: 1rem;\n  bottom: 1rem;\n  display: none; }\n  .scroll-to-top a {\n    width: 3.5rem;\n    height: 3.5rem;\n    background-color: rgba(33, 37, 41, 0.5);\n    line-height: 3.1rem; }\n\n#mainNav {\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  font-weight: 700;\n  font-family: 'Montserrat'; }\n  #mainNav .navbar-brand {\n    color: #fff; }\n  #mainNav .navbar-nav {\n    margin-top: 1rem;\n    letter-spacing: 0.0625rem; }\n    #mainNav .navbar-nav li.nav-item a.nav-link {\n      color: #fff; }\n      #mainNav .navbar-nav li.nav-item a.nav-link:hover {\n        color: #18BC9C; }\n      #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {\n        color: #fff; }\n      #mainNav .navbar-nav li.nav-item a.nav-link.active {\n        color: #18BC9C; }\n  #mainNav .navbar-toggler {\n    font-size: 80%;\n    padding: 0.8rem; }\n\n@media (min-width: 992px) {\n  #mainNav {\n    padding-top: 1.5rem;\n    padding-bottom: 1.5rem;\n    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;\n    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;\n    transition: padding-top 0.3s, padding-bottom 0.3s; }\n    #mainNav .navbar-brand {\n      font-size: 2em;\n      -webkit-transition: font-size 0.3s;\n      -moz-transition: font-size 0.3s;\n      transition: font-size 0.3s; }\n    #mainNav .navbar-nav {\n      margin-top: 0; }\n    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {\n      color: #fff;\n      background: #18BC9C; }\n      #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {\n        color: #fff;\n        background: #18BC9C; }\n  #mainNav.navbar-shrink {\n    padding-top: 0.5rem;\n    padding-bottom: 0.5rem; }\n    #mainNav.navbar-shrink .navbar-brand {\n      font-size: 1.5em; } }\n\nheader.masthead {\n  padding-top: calc(6rem + 72px);\n  padding-bottom: 6rem; }\n  header.masthead h1 {\n    font-size: 3rem;\n    line-height: 3rem; }\n  header.masthead h2 {\n    font-size: 1.3rem;\n    font-family: 'Lato'; }\n\n@media (min-width: 992px) {\n  header.masthead {\n    padding-top: calc(6rem + 106px);\n    padding-bottom: 6rem; }\n    header.masthead h1 {\n      font-size: 4.75em;\n      line-height: 4rem; }\n    header.masthead h2 {\n      font-size: 1.75em; } }\n\n.portfolio {\n  margin-bottom: -15px; }\n  .portfolio .portfolio-item {\n    position: relative;\n    display: block;\n    max-width: 25rem;\n    margin-bottom: 15px; }\n    .portfolio .portfolio-item .portfolio-item-caption {\n      -webkit-transition: all ease 0.5s;\n      -moz-transition: all ease 0.5s;\n      transition: all ease 0.5s;\n      opacity: 0;\n      background-color: rgba(24, 188, 156, 0.9); }\n      .portfolio .portfolio-item .portfolio-item-caption:hover {\n        opacity: 1; }\n      .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {\n        font-size: 1.5rem; }\n  @media (min-width: 576px) {\n    .portfolio {\n      margin-bottom: -30px; }\n      .portfolio .portfolio-item {\n        margin-bottom: 30px; } }\n\n.portfolio-modal .portfolio-modal-dialog {\n  padding: 3rem 1rem;\n  min-height: calc(100vh - 2rem);\n  margin: 1rem calc(1rem - 8px);\n  position: relative;\n  z-index: 2;\n  -moz-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);\n  box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5); }\n  .portfolio-modal .portfolio-modal-dialog .close-button {\n    position: absolute;\n    top: 2rem;\n    right: 2rem; }\n    .portfolio-modal .portfolio-modal-dialog .close-button i {\n      line-height: 38px; }\n  .portfolio-modal .portfolio-modal-dialog h2 {\n    font-size: 2rem; }\n\n@media (min-width: 768px) {\n  .portfolio-modal .portfolio-modal-dialog {\n    min-height: 100vh;\n    padding: 5rem;\n    margin: 3rem calc(3rem - 8px); }\n    .portfolio-modal .portfolio-modal-dialog h2 {\n      font-size: 3rem; } }\n\n.floating-label-form-group {\n  position: relative;\n  border-bottom: 1px solid #e9ecef; }\n  .floating-label-form-group input,\n  .floating-label-form-group textarea {\n    font-size: 1.5em;\n    position: relative;\n    z-index: 1;\n    padding-right: 0;\n    padding-left: 0;\n    resize: none;\n    border: none;\n    border-radius: 0;\n    background: none;\n    box-shadow: none !important; }\n  .floating-label-form-group label {\n    font-size: 0.85em;\n    line-height: 1.764705882em;\n    position: relative;\n    z-index: 0;\n    top: 2em;\n    display: block;\n    margin: 0;\n    -webkit-transition: top 0.3s ease, opacity 0.3s ease;\n    -moz-transition: top 0.3s ease, opacity 0.3s ease;\n    -ms-transition: top 0.3s ease, opacity 0.3s ease;\n    transition: top 0.3s ease, opacity 0.3s ease;\n    vertical-align: middle;\n    vertical-align: baseline;\n    opacity: 0; }\n  .floating-label-form-group:not(:first-child) {\n    padding-left: 14px;\n    border-left: 1px solid #e9ecef; }\n\n.floating-label-form-group-with-value label {\n  top: 0;\n  opacity: 1; }\n\n.floating-label-form-group-with-focus label {\n  color: #18BC9C; }\n\nform .row:first-child .floating-label-form-group {\n  border-top: 1px solid #e9ecef; }\n\n.footer {\n  padding-top: 5rem;\n  padding-bottom: 5rem;\n  background-color: #2C3E50;\n  color: #fff; }\n\n.copyright {\n  background-color: #1a252f; }\n\na {\n  color: #18BC9C; }\n  a:focus, a:hover, a:active {\n    color: #128f76; }\n\n.btn {\n  border-width: 2px; }\n\n.bg-primary {\n  background-color: #18BC9C !important; }\n\n.bg-secondary {\n  background-color: #2C3E50 !important; }\n\n.text-primary {\n  color: #18BC9C !important; }\n\n.text-secondary {\n  color: #2C3E50 !important; }\n\n.btn-primary {\n  background-color: #18BC9C;\n  border-color: #18BC9C; }\n  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {\n    background-color: #128f76;\n    border-color: #128f76; }\n\n.btn-secondary {\n  background-color: #2C3E50;\n  border-color: #2C3E50; }\n  .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {\n    background-color: #1a252f;\n    border-color: #1a252f; }\n\n#uberHeader {\n  background-color: white !important; }\n\n.uberLogo {\n  display: block;\n  max-width: 250px;\n  max-height: 105px;\n  width: auto;\n  height: auto;\n  margin: auto;\n  color: white !important; }\n\n#uberTitle {\n  font-family: 'Raleway', sans-serif;\n  color: #09091a; }\n\n#lyftHeader {\n  background-color: white !important; }\n\n.lyftLogo {\n  display: block;\n  max-width: 230px;\n  max-height: 95px;\n  width: auto;\n  height: auto;\n  margin: auto; }\n\n#lyftPageContainer {\n  background: #28BC9C !important;\n  color: white !important; }\n\n#timeTitle {\n  margin-bottom: 5rem !important; }\n\nbody {\n  background: white !important;\n  padding: 0;\n  margin: 0;\n  font-family: 'Lato', sans-serif; }\n\n#map {\n  width: 100% !important;\n  height: 30rem !important;\n  margin: auto; }\n\n#studentChart {\n  width: 50rem !important;\n  height: 25rem !important;\n  margin: auto !important; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'Lato'; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-weight: 700;\n  font-family: 'Montserrat'; }\n\nhr.star-light,\nhr.star-dark {\n  max-width: 15rem;\n  padding: 0;\n  text-align: center;\n  border: none;\n  border-top: solid 0.25rem;\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem;\n  margin-left: auto;\n  margin-right: auto; }\n\nhr.star-light:after,\nhr.star-dark:after {\n  position: relative;\n  top: -.8em;\n  display: inline-block;\n  padding: 0 0.25em;\n  content: '\\F005';\n  font-family: \"Font Awesome 5 Free\";\n  font-weight: 900;\n  font-size: 2em; }\n\nhr.star-light {\n  border-color: #fff; }\n\nhr.star-light:after {\n  color: #fff;\n  background-color: #18BC9C; }\n\nhr.star-dark {\n  border-color: #2C3E50; }\n\nhr.star-dark:after {\n  color: #2C3E50;\n  background-color: white; }\n\nsection {\n  padding: 6rem 0; }\n  section h2 {\n    font-size: 2.25rem;\n    line-height: 2rem; }\n  @media (min-width: 992px) {\n    section h2 {\n      font-size: 3rem;\n      line-height: 2.5rem; } }\n\n.btn-xl {\n  padding: 1rem 1.75rem;\n  font-size: 1.25rem; }\n\n.btn-social {\n  width: 3.25rem;\n  height: 3.25rem;\n  font-size: 1.25rem;\n  line-height: 2rem; }\n\n.scroll-to-top {\n  z-index: 1042;\n  right: 1rem;\n  bottom: 1rem;\n  display: none; }\n  .scroll-to-top a {\n    width: 3.5rem;\n    height: 3.5rem;\n    background-color: rgba(33, 37, 41, 0.5);\n    line-height: 3.1rem; }\n\n#mainNav {\n  padding-top: 1rem;\n  padding-bottom: 1rem;\n  font-weight: 700;\n  font-family: 'Montserrat'; }\n  #mainNav .navbar-brand {\n    color: #fff; }\n  #mainNav .navbar-nav {\n    margin-top: 1rem;\n    letter-spacing: 0.0625rem; }\n    #mainNav .navbar-nav li.nav-item a.nav-link {\n      color: #fff; }\n      #mainNav .navbar-nav li.nav-item a.nav-link:hover {\n        color: #18BC9C; }\n      #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {\n        color: #fff; }\n      #mainNav .navbar-nav li.nav-item a.nav-link.active {\n        color: #18BC9C; }\n  #mainNav .navbar-toggler {\n    font-size: 80%;\n    padding: 0.8rem; }\n\n@media (min-width: 992px) {\n  #mainNav {\n    padding-top: 1.5rem;\n    padding-bottom: 1.5rem;\n    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;\n    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;\n    transition: padding-top 0.3s, padding-bottom 0.3s; }\n    #mainNav .navbar-brand {\n      font-size: 2em;\n      -webkit-transition: font-size 0.3s;\n      -moz-transition: font-size 0.3s;\n      transition: font-size 0.3s; }\n    #mainNav .navbar-nav {\n      margin-top: 0; }\n    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {\n      color: #fff;\n      background: #18BC9C; }\n      #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {\n        color: #fff;\n        background: #18BC9C; }\n  #mainNav.navbar-shrink {\n    padding-top: 0.5rem;\n    padding-bottom: 0.5rem; }\n    #mainNav.navbar-shrink .navbar-brand {\n      font-size: 1.5em; } }\n\nheader.masthead {\n  padding-top: calc(6rem + 72px);\n  padding-bottom: 6rem; }\n  header.masthead h1 {\n    font-size: 3rem;\n    line-height: 3rem; }\n  header.masthead h2 {\n    font-size: 1.3rem;\n    font-family: 'Lato'; }\n\n@media (min-width: 992px) {\n  header.masthead {\n    padding-top: calc(6rem + 106px);\n    padding-bottom: 6rem; }\n    header.masthead h1 {\n      font-size: 4.75em;\n      line-height: 4rem; }\n    header.masthead h2 {\n      font-size: 1.75em; } }\n\n.portfolio {\n  margin-bottom: -15px; }\n  .portfolio .portfolio-item {\n    position: relative;\n    display: block;\n    max-width: 25rem;\n    margin-bottom: 15px; }\n    .portfolio .portfolio-item .portfolio-item-caption {\n      -webkit-transition: all ease 0.5s;\n      -moz-transition: all ease 0.5s;\n      transition: all ease 0.5s;\n      opacity: 0;\n      background-color: rgba(24, 188, 156, 0.9); }\n      .portfolio .portfolio-item .portfolio-item-caption:hover {\n        opacity: 1; }\n      .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {\n        font-size: 1.5rem; }\n  @media (min-width: 576px) {\n    .portfolio {\n      margin-bottom: -30px; }\n      .portfolio .portfolio-item {\n        margin-bottom: 30px; } }\n\n.portfolio-modal .portfolio-modal-dialog {\n  padding: 3rem 1rem;\n  min-height: calc(100vh - 2rem);\n  margin: 1rem calc(1rem - 8px);\n  position: relative;\n  z-index: 2;\n  -moz-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5);\n  box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.5); }\n  .portfolio-modal .portfolio-modal-dialog .close-button {\n    position: absolute;\n    top: 2rem;\n    right: 2rem; }\n    .portfolio-modal .portfolio-modal-dialog .close-button i {\n      line-height: 38px; }\n  .portfolio-modal .portfolio-modal-dialog h2 {\n    font-size: 2rem; }\n\n@media (min-width: 768px) {\n  .portfolio-modal .portfolio-modal-dialog {\n    min-height: 100vh;\n    padding: 5rem;\n    margin: 3rem calc(3rem - 8px); }\n    .portfolio-modal .portfolio-modal-dialog h2 {\n      font-size: 3rem; } }\n\n.floating-label-form-group {\n  position: relative;\n  border-bottom: 1px solid #e9ecef; }\n  .floating-label-form-group input,\n  .floating-label-form-group textarea {\n    font-size: 1.5em;\n    position: relative;\n    z-index: 1;\n    padding-right: 0;\n    padding-left: 0;\n    resize: none;\n    border: none;\n    border-radius: 0;\n    background: none;\n    box-shadow: none !important; }\n  .floating-label-form-group label {\n    font-size: 0.85em;\n    line-height: 1.764705882em;\n    position: relative;\n    z-index: 0;\n    top: 2em;\n    display: block;\n    margin: 0;\n    -webkit-transition: top 0.3s ease, opacity 0.3s ease;\n    -moz-transition: top 0.3s ease, opacity 0.3s ease;\n    -ms-transition: top 0.3s ease, opacity 0.3s ease;\n    transition: top 0.3s ease, opacity 0.3s ease;\n    vertical-align: middle;\n    vertical-align: baseline;\n    opacity: 0; }\n  .floating-label-form-group:not(:first-child) {\n    padding-left: 14px;\n    border-left: 1px solid #e9ecef; }\n\n.floating-label-form-group-with-value label {\n  top: 0;\n  opacity: 1; }\n\n.floating-label-form-group-with-focus label {\n  color: #18BC9C; }\n\nform .row:first-child .floating-label-form-group {\n  border-top: 1px solid #e9ecef; }\n\n.footer {\n  padding-top: 5rem;\n  padding-bottom: 5rem;\n  background-color: #2C3E50;\n  color: #fff; }\n\n.copyright {\n  background-color: #1a252f; }\n\na {\n  color: #18BC9C; }\n  a:focus, a:hover, a:active {\n    color: #128f76; }\n\n.btn {\n  border-width: 2px; }\n\n.bg-primary {\n  background-color: #18BC9C !important; }\n\n.bg-secondary {\n  background-color: #2C3E50 !important; }\n\n.text-primary {\n  color: #18BC9C !important; }\n\n.text-secondary {\n  color: #2C3E50 !important; }\n\n.btn-primary {\n  background-color: #18BC9C;\n  border-color: #18BC9C; }\n  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {\n    background-color: #128f76;\n    border-color: #128f76; }\n\n.btn-secondary {\n  background-color: #2C3E50;\n  border-color: #2C3E50; }\n  .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {\n    background-color: #1a252f;\n    border-color: #1a252f; }\n\n#uberHeader {\n  background-color: white !important; }\n\n.uberLogo {\n  display: block;\n  max-width: 250px;\n  max-height: 105px;\n  width: auto;\n  height: auto;\n  margin: auto;\n  color: white !important; }\n\n#uberTitle {\n  font-family: 'Raleway', sans-serif;\n  color: #09091a; }\n\n#lyftHeader {\n  background-color: white !important; }\n\n.lyftLogo {\n  display: block;\n  max-width: 230px;\n  max-height: 95px;\n  width: auto;\n  height: auto;\n  margin: auto; }\n\n#lyftPageContainer {\n  background: #28BC9C !important;\n  color: white !important; }\n\n#timeTitle {\n  margin-bottom: 5rem !important; }\n\n#flightChartTitle {\n  text-align: center; }\n\n#dashboardStudentContainer {\n  width: 100%;\n  height: 30rem;\n  margin: auto !important;\n  margin-top: 10rem !important;\n  font-size: 1.5rem !important; }\n\n#studentChart {\n  width: 15rem;\n  height: 15rem;\n  margin-top: 10rem !important;\n  font-size: 1.5rem !important; }\n\n#eventParagraph {\n  font-size: 1.5rem;\n  padding: 2rem;\n  width: 80%;\n  margin: auto;\n  text-align: center;\n  font-size: 2rem; }\n\nbody {\n  background: white !important;\n  padding: 0;\n  margin: 0;\n  font-family: 'Lato', sans-serif; }\n\n#map {\n  width: 100% !important;\n  height: 30rem !important;\n  margin: auto; }\n\n#studentChart {\n  width: 50rem !important;\n  height: 25rem !important;\n  margin: auto !important; }\n", ""]);
 
 // exports
 
@@ -123852,7 +123852,9 @@ var Lyft = function (_React$Component) {
 
     _this.state = {
       latitude: 40.854885,
-      longitude: -88.081807
+      longitude: -88.081807,
+      maxFlights: 0,
+      numDrivers: 0
     };
 
     _this.getFlightData = _this.getFlightData.bind(_this);
@@ -123888,6 +123890,22 @@ var Lyft = function (_React$Component) {
           center: pyrmont,
           zoom: 14 });
 
+        var myLatlng = new google.maps.LatLng(_this2.state.latitude, _this2.state.longitude);
+        var myMarker = new google.maps.Marker({
+          position: myLatlng,
+          title: "Current Location"
+        });
+
+        var infowindow1 = new google.maps.InfoWindow({
+          content: myMarker.title
+        });
+
+        myMarker.addListener('click', function () {
+          infowindow1.open(map, myMarker);
+        });
+
+        myMarker.setMap(map);
+
         var airportLatlng = new google.maps.LatLng(43.1225, -77.6666);
 
         var airportMarker = new google.maps.Marker({
@@ -123906,38 +123924,60 @@ var Lyft = function (_React$Component) {
 
         airportMarker.setMap(map);
 
+        _this2.eventDataService.getEventData(_this2.state.latitude, _this2.state.longitude, function (events) {
+          var actual_events = events.search.events;
+
+          var final_event_obj = actual_events[0].event;
+
+          _this2.setState({ mostPopularEvent: final_event_obj[0] });
+
+          for (var current_event in final_event_obj) {
+            var some_obj = final_event_obj[current_event];
+            for (var more_current_event in some_obj) {
+              var latitude, longitude, title, stopTime;
+              if (more_current_event == "longitude") {
+                longitude = some_obj[more_current_event];
+                console.log('longitude', longitude);
+              }
+              if (more_current_event == "latitude") {
+                latitude = some_obj[more_current_event];
+                console.log('latitude', latitude);
+              }
+              if (more_current_event == "title") {
+                title = some_obj[more_current_event];
+                console.log('title', title);
+              }
+              if (more_current_event == "stop_time") {
+                stopTime = some_obj[more_current_event];
+                console.log('stopTime', stopTime);
+              }
+
+              var myLatlng = new google.maps.LatLng(latitude, longitude);
+
+              var marker = new google.maps.Marker({
+                position: myLatlng,
+                icon: '../../assets/event_marker.png'
+              });
+
+              marker.setMap(map);
+            }
+          }
+        });
+
         _this2.LyftDataService.getNearbyDrivers(_this2.state.latitude, _this2.state.longitude, function (driversData) {
-          /*
-          console.log('drivers data', driversData)
-          console.log('typeof(driversData)', typeof(driversData))
-          console.log('driversData.nearby_drivers', driversData.nearby_drivers)
-          console.log('typeof(driversData.nearby_drivers)', typeof(driversData.nearby_drivers))
-          console.log('driversData.nearby_drivers[0]', driversData.nearby_drivers[0])
-          */
 
           var lyftDrivers = driversData.nearby_drivers[0];
           var lyftPlusDrivers = driversData.nearby_drivers[1];
 
-          /*
-          console.log('lyftDrivers', lyftDrivers)
-          console.log('typeof(lyftDrivers)', typeof(lyftDrivers))
-           console.log('lyftDrivers.drivers', lyftDrivers.drivers)
-          console.log('typeof(lyftDrivers.drivers)', typeof(lyftDrivers.drivers))
-          */
+          var numDrivers = 0;
 
           for (var driver in lyftDrivers.drivers) {
             var current_driver = lyftDrivers.drivers[driver];
-            /*
-            console.log('current_driver', current_driver)
-            console.log('typeof(current_driver)', typeof(current_driver))
-            console.log('current_driver[0]', current_driver[0])
-            console.log('current_driver.locations[0]', current_driver.locations[0])
-            */
+
             var latitude = current_driver.locations[0].lat;
             var longitude = current_driver.locations[0].lng;
 
-            console.log('latitude', latitude);
-            console.log('longitude', longitude);
+            numDrivers += 1;
 
             var myLatlng = new google.maps.LatLng(latitude, longitude);
 
@@ -123948,41 +123988,89 @@ var Lyft = function (_React$Component) {
 
             marker.setMap(map);
           }
+
+          _this2.setState({ numDrivers: numDrivers });
         });
       });
 
-      var ctx = document.getElementById("studentChart");
+      var flightData = this.flightDataService.getFlightData(function (flightData) {
+        _this2.setState({ flightData: flightData });
+        console.log('this.state.flightData', _this2.state.flightData);
 
-      var myChart = new _chart2.default(ctx, {
-        type: 'bar',
-        data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
-          datasets: [{
-            label: 'Frequently discussed topics',
-            data: [12, 19, 3, 1, 2, 43],
-            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)'],
-            borderColor: ['rgba(255,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true
+        var datasets = [];
+
+        var time_data = [];
+        for (var airportCode in flightData) {
+
+          if (flightData[airportCode].hasOwnProperty('roc')) {
+            var attributeKey = airportCode;
+            var attributeValue = flightData[airportCode];
+
+            for (var moreData in attributeValue) {
+              var attributeK = moreData;
+              var attributeV = attributeValue[moreData];
+
+              for (var date in attributeV) {
+
+                var data_entry = {
+                  data: [],
+                  label: date
+                };
+
+                var some_date = attributeV[date];
+
+                for (var time in some_date) {
+                  if (typeof time === 'string' && time_data.includes(time) != true) {
+                    time_data.push(time);
+
+                    var some_time = some_date[time];
+                    data_entry.data.push(some_time);
+                  }
+                }
+
+                datasets.push(data_entry);
               }
-            }]
+            }
           }
         }
-      });
 
-      this.eventDataService.getEventData(function (events) {
-        console.log("events", events);
+        console.log('datasets', datasets);
+
+        new _chart2.default(document.getElementById("studentChart"), {
+          type: 'line',
+          data: {
+            labels: time_data,
+            datasets: [{
+              data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 3, 5, 2, 6, 3, 3, 4, 7, 6, 1, 5, 3, 2, 10],
+              label: "Oct 26",
+              borderColor: "#3e95cd",
+              fill: false
+            }, {
+              data: [0, 3, 0, 0, 0, 0, 0, 1, 0, 0, 5, 2, 5, 3, 4, 2, 3, 5, 6, 5, 1, 3, 1, 2],
+              label: "Oct 27",
+              borderColor: "#8e5ea2",
+              fill: false
+            }, {
+              data: [0, 1, 0, 0, 0, 0, 0, 0, 1, 3, 3, 7, 2, 5, 3, 2, 4, 7, 6, 1, 3, 3, 0, 9],
+              label: "Oct 28",
+              borderColor: "#3cba9f",
+              fill: false
+            }, {
+              data: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+              label: "Oct 29",
+              borderColor: "#e8c3b9",
+              fill: false
+            }]
+          }
+        });
       });
     }
   }, {
     key: 'render',
     value: function render() {
+
+      var eventTitle = this.state.mostPopularEvent != undefined ? this.state.mostPopularEvent.title : "Unavailable";
+      var eventStopTime = this.state.mostPopularEvent != undefined ? this.state.mostPopularEvent.stop_time : "0:00";
 
       return _react2.default.createElement(
         'div',
@@ -124009,8 +124097,8 @@ var Lyft = function (_React$Component) {
             ),
             _react2.default.createElement(
               'p',
-              { className: 'lead' },
-              'Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day. Plan your driving schedule in advance through our easy to use service and add value to your time.'
+              { className: 'lead', id: 'eventParagraph' },
+              'There are 9 flights arriving at 11:00 PM at Greater Rochester International Airport'
             ),
             _react2.default.createElement(
               'div',
@@ -124120,6 +124208,7 @@ var Lyft = function (_React$Component) {
             )
           )
         ),
+        _react2.default.createElement('hr', null),
         _react2.default.createElement(
           'section',
           { className: 'portfolio' },
@@ -124133,8 +124222,19 @@ var Lyft = function (_React$Component) {
             ),
             _react2.default.createElement(
               'p',
-              { className: 'lead' },
-              'Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day. Plan your driving schedule in advance through our easy to use service and add value to your time.'
+              { className: 'lead', id: 'eventParagraph' },
+              'The most popular event within a 25 mile radius from you is ',
+              _react2.default.createElement(
+                'b',
+                null,
+                eventTitle
+              ),
+              ' located at n/a and ends at approximately ',
+              _react2.default.createElement(
+                'b',
+                null,
+                eventStopTime
+              )
             ),
             _react2.default.createElement(
               'div',
@@ -124244,6 +124344,7 @@ var Lyft = function (_React$Component) {
             )
           )
         ),
+        _react2.default.createElement('hr', null),
         _react2.default.createElement(
           'section',
           { className: 'portfolio' },
@@ -124257,8 +124358,14 @@ var Lyft = function (_React$Component) {
             ),
             _react2.default.createElement(
               'p',
-              { className: 'lead' },
-              'Drive Smart aggregates data from across the web to determine the optimal times to drive uber/lyft on any given day. Plan your driving schedule in advance through our easy to use service and add value to your time.'
+              { className: 'lead', id: 'eventParagraph' },
+              'There are currently ',
+              _react2.default.createElement(
+                'b',
+                null,
+                this.state.numDrivers
+              ),
+              ' other Lyft drivers working in your area.'
             ),
             _react2.default.createElement(
               'div',
@@ -124371,17 +124478,13 @@ var Lyft = function (_React$Component) {
         _react2.default.createElement('div', { id: 'map' }),
         _react2.default.createElement(
           'div',
-          { className: 'dashboardStudentContainer', width: '20rem', height: '20rem' },
-          _react2.default.createElement('canvas', { id: 'studentChart', width: '15rem', height: '15rem' })
-        ),
-        _react2.default.createElement(
-          'div',
-          null,
+          { className: 'dashboardStudentContainer', id: 'dashboardStudentContainer' },
           _react2.default.createElement(
-            'button',
-            { onClick: this.getFlightData },
-            'Get Flight Data'
-          )
+            'h3',
+            { id: 'flightChartTitle' },
+            'Greater Rochester International Airport Flight Times'
+          ),
+          _react2.default.createElement('canvas', { id: 'studentChart' })
         )
       );
     }
@@ -124417,21 +124520,19 @@ var EventDataService = function () {
 
   _createClass(EventDataService, [{
     key: 'getEventData',
-    value: function getEventData(callback) {
-
-      console.log("This is happening");
+    value: function getEventData(latitude, longitude, callback) {
 
       var parseString = __webpack_require__(796).parseString;
 
       var proxyurl = "https://cors-anywhere.herokuapp.com/";
-      var url = 'https://api.eventful.com/rest/events/search?app_key=PTc4mmXnq37xG6Cz&where=43,-77&within=25&date=2018102600-2018113000&sort_by=popularity&page_size=50';
+      var url = 'https://api.eventful.com/rest/events/search?app_key=PTc4mmXnq37xG6Cz&where=' + latitude + ',' + longitude + '&within=25&date=today&sort_by=popularity&page_size=20';
       fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
       .then(function (response) {
         return response.text();
       }).then(function (contents) {
         var xml_response = contents;
         parseString(xml_response, function (err, result) {
-          console.log('results', result);
+          callback(result);
         });
       }).catch(function () {
         return console.log("Can’t access " + url + " response. Blocked by browser?");
