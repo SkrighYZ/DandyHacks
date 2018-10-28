@@ -44,7 +44,8 @@
     "react-simplert": "0.0.2",
     "request": "^2.83.0",
     "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2"
+    "style-loader": "^0.18.2",
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

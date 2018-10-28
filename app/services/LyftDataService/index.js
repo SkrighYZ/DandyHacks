@@ -1,26 +1,20 @@
 var request = require('request')
 
-class EventDataService {
+class LyftDataService {
 
-  getEventData(callback) {
+  getNearbyDrivers(callback) {
 
-    var parseString = require('xml2js').parseString;
-
-    var url = 'http://api.eventful.com/rest/events/search?app_key=PTc4mmXnq37xG6Cz&where=43,-77&within=25&date=2018102600-2018113000&sort_by=popularity&page_size=100'
+    var url = 'https://api.lyft.com/oauth/token/username=NjnHQD7IWWxJ&password=Gbtl3ZeBuLzOODGTGqTKnpSwMNQOyl9j'
     var options = {
       method: 'get',
       url: url
     }
 
     request(options, function (err, res, body) {
-
       if (err) {
         console.error('error posting json: ', err)
         throw err
       }
-
-      console.log('res', res)
-      console.log('body', body)
 
       var headers = res.headers
       var statusCode = res.statusCode
@@ -31,4 +25,4 @@ class EventDataService {
   }
 }
 
-export default EventDataService
+export default LyftDataService

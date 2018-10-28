@@ -99,22 +99,22 @@ class Uber extends React.Component {
     navigator.geolocation.getCurrentPosition(
       position => {
         const { lat, lon } = position.coords;
-        console.log(position);
+        //console.log(position);
 
         this.setState({
          latitude: position.coords.latitude,
          longitude: position.coords.longitude
         });
-        console.log(this.state);
+        //console.log(this.state);
       }
     )
 
     var pyrmont = {lat: this.state.latitude, lng: this.state.longitude};
-    map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(document.getElementById('map'), {
       center: pyrmont,
       zoom: 12});
 
-    infowindow = new google.maps.InfoWindow();
+    var infowindow = new google.maps.InfoWindow();
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch({
         location: pyrmont,
@@ -136,8 +136,6 @@ class Uber extends React.Component {
         <img src='../../assets/uber-white.png' className='uberLogo'></img>
         </div>
       </header>
-
-      <hr></hr>
 
       <section className="portfolio" id="portfolio">
         <div className="container">

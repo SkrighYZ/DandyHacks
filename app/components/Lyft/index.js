@@ -1,4 +1,5 @@
 import React from 'react'
+import EventDataService from '../../services/EventDataService/index'
 import FlightDataService from '../../services/FlightDataService/index'
 import Chart from 'chart.js';
 
@@ -14,6 +15,7 @@ class Lyft extends React.Component {
 
     this.getFlightData = this.getFlightData.bind(this)
     this.flightDataService = new FlightDataService()
+    this.eventDataService = new EventDataService()
   }
 
   getFlightData() {
@@ -24,13 +26,13 @@ class Lyft extends React.Component {
     navigator.geolocation.getCurrentPosition(
       position => {
         const { lat, lon } = position.coords;
-        console.log(position);
+        //console.log(position);
 
         this.setState({
          latitude: position.coords.latitude,
          longitude: position.coords.longitude
         });
-        console.log(this.state);
+        //console.log(this.state);
       }
     );
 
@@ -72,17 +74,21 @@ class Lyft extends React.Component {
   });
 
   var pyrmont = {lat: this.state.latitude, lng: this.state.longitude};
-  map = new google.maps.Map(document.getElementById('map'), {
+  var map = new google.maps.Map(document.getElementById('map'), {
     center: pyrmont,
     zoom: 12});
 
-  infowindow = new google.maps.InfoWindow();
+  var infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
       location: pyrmont,
       radius: 10000,
       type: ['airport']
   }, callback);
+
+  this.eventDataService.getEventData((events) => {
+    console.log("events", events)
+  })
 
 }
 
