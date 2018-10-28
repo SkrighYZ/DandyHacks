@@ -123888,6 +123888,24 @@ var Lyft = function (_React$Component) {
           center: pyrmont,
           zoom: 14 });
 
+        var airportLatlng = new google.maps.LatLng(43.1225, -77.6666);
+
+        var airportMarker = new google.maps.Marker({
+          position: airportLatlng,
+          title: "Greater Rochester International Airport",
+          icon: '../../assets/airport_marker.png'
+        });
+
+        var infowindow2 = new google.maps.InfoWindow({
+          content: airportMarker.title
+        });
+
+        airportMarker.addListener('click', function () {
+          infowindow2.open(map, airportMarker);
+        });
+
+        airportMarker.setMap(map);
+
         _this2.LyftDataService.getNearbyDrivers(_this2.state.latitude, _this2.state.longitude, function (driversData) {
           /*
           console.log('drivers data', driversData)
