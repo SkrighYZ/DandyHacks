@@ -247,6 +247,7 @@ class Lyft extends React.Component {
       <section className="portfolio">
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Flights</h2>
+          <hr className="star-dark mb-5"></hr>
           <p className="lead" id='eventParagraph'>There are 9 flights arriving at 11:00 PM at Greater Rochester International Airport</p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
@@ -307,11 +308,10 @@ class Lyft extends React.Component {
         </div>
       </section>
 
-      <hr></hr>
-
-      <section className="portfolio">
+      <section className="portfolio" id='anotherGreen'>
         <div className="container">
-          <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Events</h2>
+          <h2 className="text-center text-uppercase text-secondary mb-0" id='eventMiddleTitle'>Events</h2>
+          <hr className="star-light mb-5"></hr>
           <p className="lead" id='eventParagraph'>The most popular event within a 25 mile radius from you is <b>{eventTitle}</b> located at n/a and ends at approximately <b>{eventStopTime}</b></p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
@@ -372,11 +372,10 @@ class Lyft extends React.Component {
         </div>
       </section>
 
-      <hr></hr>
-
       <section className="portfolio">
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Competition</h2>
+          <hr className="star-dark mb-5"></hr>
           <p className="lead" id='eventParagraph'>There are currently <b>{this.state.numDrivers}</b> other Lyft drivers working in your area.</p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
