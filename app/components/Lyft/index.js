@@ -3,7 +3,10 @@ import EventDataService from '../../services/EventDataService/index'
 import FlightDataService from '../../services/FlightDataService/index'
 import LyftDataService from '../../services/LyftDataService/index'
 import Chart from 'chart.js';
-
+var max = 0
+var airline = ""
+var day = ""
+var timeMax = "";
 class Lyft extends React.Component {
 
   constructor() {
@@ -70,13 +73,12 @@ class Lyft extends React.Component {
             var service = new google.maps.places.PlacesService(map);
          service.nearbySearch({
          location: pyrmont,
-         radius: 100000,
-         keyword: ['airport'],
-         name: ['airport'],
-         type: ['airport']},
+         radius: 10000,
+         type: 'airport'},
          function(results, status){
            if (status === google.maps.places.PlacesServiceStatus.OK) {
              for (var i = 0; i < results.length; i++) {
+               console.log(results);
                let placeLoc = results[i].geometry.location;
                let marker = new google.maps.Marker({
                map: map,
@@ -191,6 +193,13 @@ class Lyft extends React.Component {
                       for(var i in attributeV){
                         var time = [];
                         for(var z in attributeV[i]){
+                          if(attributeV[i][z]>max){
+                            airline = String(attributeK);
+                            max = String(attributeV[i][z]);
+                            timeMax = String(z);
+                            day = String(i);
+                          }
+
                           time.push(String(attributeV[i][z]));
                         }
                         var date = {
@@ -311,7 +320,7 @@ class Lyft extends React.Component {
         <div className="container">
           <h2 className="text-center text-uppercase text-secondary mb-0" id='timeTitle'>Flights</h2>
           <hr className="star-dark mb-5"></hr>
-          <p className="lead" id='eventParagraph'>There are <span id='boldInfo'>9</span> flights arriving at <span id='boldInfo'>11:00 PM</span> at <span id='boldInfo'>Greater Rochester International Airport</span></p>
+          <p className="lead" id='eventParagraph'>There are <span id='boldInfo'>{max}</span> flights arriving on <span id='boldInfo'>{timeMax} {day}</span> at <span id='boldInfo'>{airline}</span></p>
           <div className="row">
             <div className="col-md-6 col-lg-4">
               <a className="portfolio-item d-block mx-auto" href="#portfolio-modal-1">
