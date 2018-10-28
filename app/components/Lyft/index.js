@@ -27,6 +27,14 @@ class Lyft extends React.Component {
   }
 
   componentDidMount() {
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF';
+      var color = '#';
+      for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
     navigator.geolocation.getCurrentPosition(
       position => {
         const { lat, lon } = position.coords;
@@ -165,80 +173,110 @@ class Lyft extends React.Component {
     );
 
     let flightData = this.flightDataService.getFlightData((flightData) => {
-          this.setState({ flightData : flightData })
-          console.log('this.state.flightData', this.state.flightData)
+      this.setState({ flightData : flightData })
+                console.log('this.state.flightData', this.state.flightData)
 
-          var datasets = []
-
-          var time_data = [];
-          for (var airportCode in flightData) {
-
-
-            if (flightData[airportCode].hasOwnProperty('roc')) {
-              var attributeKey = airportCode
-              var attributeValue = flightData[airportCode]
-
-              for (var moreData in attributeValue) {
-                var attributeK = moreData
-                var attributeV = attributeValue[moreData]
-
-                for (var date in attributeV) {
-
-                  var data_entry = {
-                    data: [],
-                    label: date
-                  }
-
-                  let some_date = attributeV[date]
-
-                  for (var time in some_date) {
-                    if ((typeof(time) === 'string') && (time_data.includes(time) != true)) {
-                      time_data.push(time)
-
-                      let some_time = some_date[time]
-                      data_entry.data.push(some_time)
+                var dates_data = {};
+                for (var airportCode in flightData) {
+                  var attributeKey = airportCode
+                  var attributeValue = flightData[airportCode]
+                  for (var moreData in attributeValue) {
+                    var attributeK = moreData
+                    var attributeV = attributeValue[moreData]
+                    console.log('attributeK', attributeK)
+                    console.log('attributeV', attributeV)
+                    if (typeof(attributeV) == 'object') {
+                      console.log('true')
+                      var dates = []
+                      for(var i in attributeV){
+                        var time = [];
+                        for(var z in attributeV[i]){
+                          time.push(String(attributeV[i][z]));
+                        }
+                        var date = {
+                        label: String(i),
+                        backgroundColor: getRandomColor(),
+                        data:time,
+                        };
+                        dates.push(date);
                     }
-
+                    dates_data[attributeK]= dates
                   }
-
-                    datasets.push(data_entry)
-
+                }
               }
-            }
-          }
-        }
+                console.log('by Dates', dates_data)
 
-        console.log('datasets', datasets)
+      /*
 
-        new Chart(document.getElementById("studentChart"), {
-          type: 'line',
-          data: {
-            labels: time_data,
-            datasets: [{
-              data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 3, 5, 2, 6, 3, 3, 4, 7, 6, 1, 5, 3, 2, 10],
-              label: "Oct 26",
-              borderColor: "#3e95cd",
-              fill: false
-            }, {
-              data: [0, 3, 0, 0, 0, 0, 0, 1, 0, 0, 5, 2, 5, 3, 4, 2, 3, 5, 6, 5, 1, 3, 1, 2],
-              label: "Oct 27",
-              borderColor: "#8e5ea2",
-              fill: false
-            }, {
-              data: [0, 1, 0, 0, 0, 0, 0, 0, 1, 3, 3, 7, 2, 5, 3, 2, 4, 7, 6, 1, 3, 3, 0, 9],
-              label: "Oct 28",
-              borderColor: "#3cba9f",
-              fill: false
-            }, {
-              data: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-              label: "Oct 29",
-              borderColor: "#e8c3b9",
-              fill: false
-            }
-          ]
-        }
-      });
-    })
+      new Chart(ctx, {
+      				type: 'bar',
+      				data: barChartData,
+      				options: {
+      					title: {
+      						display: true,
+      						text: 'Chart.js Bar Chart - Stacked'
+      					},
+      					tooltips: {
+      						mode: 'index',
+      						intersect: false
+      					},
+      					responsive: true,
+      					scales: {
+      						xAxes: [{
+      							stacked: true,
+      						}],
+      						yAxes: [{
+      							stacked: true
+      						}]
+      					}
+      				}
+      			});
+      */
+                //var ctx = document.getElementById("studentChart");
+                //var curr = dates_data['lga'];
+                //onsole.log('curr', curr)
+                for (var key in dates_data){
+                  if (dates_data.hasOwnProperty(key)) {
+                      console.log(key, dates_data[key]);
+                  }
+                  var container = document.querySelector('.dashboardStudentContainer');
+                  var div = document.createElement('div');
+          				div.classList.add('chart-container');
+
+          				var canvas = document.createElement('canvas');
+          				div.appendChild(canvas);
+          				container.appendChild(div);
+                  var curr = dates_data[key];
+          				var ctx = canvas.getContext('2d');
+                  var myChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                      labels:["12AM","1AM","2AM","3AM","4AM","5AM","6AM","7AM","8AM","9AM","10AM","11AM",
+                             "12PM","1PM","2PM","3PM","4PM","5PM","6PM","7PM","8PM","9PM","10PM","11PM"],
+                      datasets:curr
+                  },
+                  options: {
+                    title: {
+                      display: true,
+                      text: key
+                    },
+                    tooltips: {
+                      mode: 'index',
+                      intersect: false
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+                      }],
+                      yAxes: [{
+                        stacked: true
+                      }]
+                    }
+                  }
+                });
+              }
+              })
 
 }
 
@@ -453,9 +491,8 @@ class Lyft extends React.Component {
       <div id='map'></div>
 
 
-      <div className='dashboardStudentContainer' id='dashboardStudentContainer'>
-      <h3 id='flightChartTitle'>Greater Rochester International Airport Flight Times</h3>
-        <canvas id="studentChart"></canvas>
+      <div className='dashboardStudentContainer'>
+
       </div>
 
       </div>

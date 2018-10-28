@@ -188,7 +188,7 @@ class Home extends React.Component {
             <div className="col-md-4">
               <h4 className="text-uppercase mb-4">About Whip</h4>
               <p className="lead mb-0">Whip is free to use for every driver<br></br>
-                <a href="http://startbootstrap.com">Plan Your Uber Schedule</a>.</p>
+                <a href="/Lyft">Plan Your Uber Schedule</a>.</p>
             </div>
           </div>
         </div>
