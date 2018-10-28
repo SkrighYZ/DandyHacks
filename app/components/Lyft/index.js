@@ -40,6 +40,7 @@ class Lyft extends React.Component {
           center: pyrmont,
           zoom: 14});
 
+
         this.LyftDataService.getNearbyDrivers(this.state.latitude, this.state.longitude, (driversData) => {
           /*
           console.log('drivers data', driversData)
@@ -53,11 +54,13 @@ class Lyft extends React.Component {
           let lyftPlusDrivers = driversData.nearby_drivers[1]
 
 
+          /*
           console.log('lyftDrivers', lyftDrivers)
           console.log('typeof(lyftDrivers)', typeof(lyftDrivers))
 
           console.log('lyftDrivers.drivers', lyftDrivers.drivers)
           console.log('typeof(lyftDrivers.drivers)', typeof(lyftDrivers.drivers))
+          */
 
           for (var driver in lyftDrivers.drivers) {
             let current_driver = lyftDrivers.drivers[driver]
@@ -77,7 +80,8 @@ class Lyft extends React.Component {
 
 
             var marker = new google.maps.Marker({
-              position: myLatlng
+              position: myLatlng,
+              icon: '../../assets/car_marker.png'
               });
 
               marker.setMap(map);
