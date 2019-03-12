@@ -8,4 +8,4 @@ Whip is a utility application designed to provide uber/lyft drivers with the inf
 4. Navigate to `localhost:3000`
 
 ## Demo
-![MapImage](https://he-s3.s3.amazonaws.com/media/sprint/dandyhacks-1/team/472076/e785ed1shot1.png)
+![MapImage](https://drive.google.com/file/d/1gf3C6OekktpoQSYr8tbJDIk66lhLtsxC/view?usp=sharing)
